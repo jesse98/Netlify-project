@@ -1,0 +1,15 @@
+{
+  "id": "./",
+  "name": "Construction Intelligence",
+  "short_name": "Construct",
+  "description": "Ask Construct and explore business AI capabilities.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    { "src": "./twin-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./twin-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
