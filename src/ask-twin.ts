@@ -109,7 +109,7 @@ export function mountAskTwin() {
   privacy.append(el('summary', 'About this conversation'),
     el('p', 'Ask Construct uses AI and this page’s conversation to answer you. Navigation keeps the context; refresh, close or New conversation clears it from this page. Requests are processed by AppDeploy’s server-side AI. Provider retention is not specified. Do not share passwords, payment details or confidential records. No business systems are connected.'),
     el('p', 'Voice starts after you press Start and grant microphone permission, and stops after 15 seconds. Your browser’s speech service may process audio externally. Recognised text is sent to Ask Construct; this page does not retain audio.'),
-    el('p', 'The contact form is provided by Jotform and uses our existing Twin form account. Submitting it sends the details you enter to that account. Your chat history is not attached automatically.'));
+    el('p', 'This preview does not submit enquiries automatically. Copy any implementation brief you want to share with the Construct team.'));
   contact.insertBefore(privacy, contactPanel);
   const dataDialog = el('dialog', undefined, 'twin-data-dialog');
   dataDialog.setAttribute('aria-labelledby', 'twin-data-title');
@@ -124,11 +124,7 @@ export function mountAskTwin() {
     ['Demonstrations and service operation', 'Capability examples use fictional data and do not change real business records. The chat backend keeps timestamps under a hashed connection identifier for request limits; chat content is not written to that rate-limit database. Hosting and AI providers may maintain their own operational records.'],
     ['Questions or data requests', 'Use the implementation brief or your existing contact with the Construct team. Provider, backup and retention limitations need to be checked for the specific deployment.']
   ]) dataDialog.append(el('h3', heading), el('p', text));
-  const jotformPrivacy = el('a', 'Jotform privacy information');
-  jotformPrivacy.href = 'https://www.jotform.com/privacy/';
-  jotformPrivacy.target = '_blank';
-  jotformPrivacy.rel = 'noopener noreferrer';
-  dataDialog.append(jotformPrivacy, button('Close privacy information', () => dataDialog.close(), 'ask-text-button'));
+  dataDialog.append(button('Close privacy information', () => dataDialog.close(), 'ask-text-button'));
   document.body.append(dataDialog);
   function showPrivacy() {
     if (!dataDialog.open) dataDialog.showModal();
@@ -290,12 +286,12 @@ export function mountAskTwin() {
     if (!contactFrame) {
       const intro = el('p', undefined, 'ask-contact-intro');
       intro.append(el('strong', contactTopic ? 'Enquiry topic: ' + contactTopic : 'Tell Construct what construction workflow you would like to explore.'),
-        el('span', 'Mention your topic in the enquiry below. No chat history is attached automatically.'));
+        el('span', 'Use Ask Construct to prepare a brief. No chat history is shared automatically.'));
       intro.append(el('br'), button('Privacy & data', showPrivacy, 'ask-text-button twin-data-link'));
-      const loading = el('p', 'Opening the enquiry form. You can also use the new-tab link below.', 'ask-contact-loading');
+      const loading = el('p', 'Preparing implementation options.', 'ask-contact-loading');
       loading.setAttribute('role', 'status');
       contactFrame = el('iframe', undefined, 'ask-contact-iframe');
-      contactFrame.title = 'Contact an AI expert from Construct';
+      contactFrame.title = 'Construct implementation information';
       contactFrame.src = ENQUIRY_FORM_URL || 'about:blank';
       contactFrame.referrerPolicy = 'no-referrer';
       contactFrame.setAttribute('sandbox', 'allow-forms allow-scripts allow-same-origin allow-popups');
@@ -376,7 +372,7 @@ export function mountAskTwin() {
     if (exchange.response) {
       const response = exchange.response;
       const message = el('article', undefined, 'ask-message ask-answer');
-      message.append(el('h3', 'Twin', 'ask-speaker'));
+      message.append(el('h3', 'Construct', 'ask-speaker'));
       const content = el('div', undefined, 'ask-answer-text');
       const paragraphs = response.answer.split(/\n\s*\n/);
       const more = el('details', undefined, 'ask-more-detail');
@@ -427,7 +423,7 @@ export function mountAskTwin() {
       }));
       log.append(errorBox);
     } else {
-      const working = el('p', 'Twin is thinking…', 'ask-working');
+      const working = el('p', 'Construct is thinking…', 'ask-working');
       working.setAttribute('role', 'status');
       log.append(working);
     }
