@@ -17,7 +17,7 @@ declare global {
   }
 }
 
-const ENQUIRY_FORM_URL = 'https://form.jotform.com/262622644245052';
+const ENQUIRY_FORM_URL = '';
 const el = <K extends keyof HTMLElementTagNameMap>(tag: K, text?: string, className?: string): HTMLElementTagNameMap[K] => {
   const element = document.createElement(tag);
   if (text !== undefined) element.textContent = text;
@@ -68,7 +68,7 @@ export function mountAskTwin() {
   let selected = 0;
 
   const contact = el('section', undefined, 'ask-contact-block');
-  const contactToggle = button('Speak to an AI expert from Construct', toggleContact, 'ask-contact-button');
+  const contactToggle = button('Discuss a construction automation pilot', toggleContact, 'ask-contact-button');
   contactToggle.setAttribute('aria-expanded', 'false');
   contactToggle.setAttribute('aria-controls', 'ask-contact-form');
   const contactPanel = el('div', undefined, 'ask-contact-panel');
@@ -120,9 +120,9 @@ export function mountAskTwin() {
     ['Ask Construct', 'Your question and relevant conversation context are sent to AppDeploy’s server-side AI to generate an answer. The public chat has no access to your business accounts. Do not include passwords, payment details or confidential records.'],
     ['Session memory', 'Conversation context stays in this open page while you navigate. Refreshing, closing the page or choosing New conversation clears it from the page. This does not request deletion from service-provider logs. Provider retention and processing locations have not been confirmed for this public site.'],
     ['Voice questions', 'Microphone access starts only after you press Start and grant permission. The session stops after 15 seconds. Your browser’s speech service may process audio externally; recognised text is sent to Ask Construct. This page does not retain audio. Voice cloning tests are arranged separately with Construct; there is no recording upload here.'],
-    ['Contact enquiries', 'The embedded form sends the details you submit to Construct’s existing Jotform account. Jotform and its spam-protection service process the form interaction. Your chat is not attached automatically. Paste only the details you want to share.'],
+    ['Contact enquiries', 'This preview does not submit an enquiry or connect to a live mailbox. Copy only the details you want to share with the Construct team.'],
     ['Demonstrations and service operation', 'Capability examples use fictional data and do not change real business records. The chat backend keeps timestamps under a hashed connection identifier for request limits; chat content is not written to that rate-limit database. Hosting and AI providers may maintain their own operational records.'],
-    ['Questions or data requests', 'Contact info@construct.systems to ask about information you shared with Construct or request review, correction or removal. Any provider, backup or retention limitations need to be checked for the specific request.']
+    ['Questions or data requests', 'Use the implementation brief or your existing contact with the Construct team. Provider, backup and retention limitations need to be checked for the specific deployment.']
   ]) dataDialog.append(el('h3', heading), el('p', text));
   const jotformPrivacy = el('a', 'Jotform privacy information');
   jotformPrivacy.href = 'https://www.jotform.com/privacy/';
@@ -136,7 +136,7 @@ export function mountAskTwin() {
   }
   privacy.append(button('Read privacy & data information', showPrivacy, 'ask-text-button twin-data-link'));
   const help = document.getElementById('question-help');
-  if (help) help.textContent = 'Ask Construct what you would like to build or improve in your business.';
+  if (help) help.textContent = 'Ask Construct what you would like to automate or improve in your construction business.';
   query.maxLength = 2000;
   query.setAttribute('aria-label', 'Ask Construct a question');
   const submitButton = form.lastElementChild as HTMLButtonElement;
@@ -289,22 +289,21 @@ export function mountAskTwin() {
     if (!opening) return;
     if (!contactFrame) {
       const intro = el('p', undefined, 'ask-contact-intro');
-      intro.append(el('strong', contactTopic ? 'Enquiry topic: ' + contactTopic : 'Tell Construct what you would like to explore.'),
+      intro.append(el('strong', contactTopic ? 'Enquiry topic: ' + contactTopic : 'Tell Construct what construction workflow you would like to explore.'),
         el('span', 'Mention your topic in the enquiry below. No chat history is attached automatically.'));
       intro.append(el('br'), button('Privacy & data', showPrivacy, 'ask-text-button twin-data-link'));
       const loading = el('p', 'Opening the enquiry form. You can also use the new-tab link below.', 'ask-contact-loading');
       loading.setAttribute('role', 'status');
       contactFrame = el('iframe', undefined, 'ask-contact-iframe');
       contactFrame.title = 'Contact an AI expert from Construct';
-      contactFrame.src = ENQUIRY_FORM_URL;
+      contactFrame.src = ENQUIRY_FORM_URL || 'about:blank';
       contactFrame.referrerPolicy = 'no-referrer';
       contactFrame.setAttribute('sandbox', 'allow-forms allow-scripts allow-same-origin allow-popups');
       contactFrame.addEventListener('load', () => { loading.hidden = true; });
-      const fallback = el('a', 'Open the enquiry form in a new tab', 'ask-form-fallback');
-      fallback.href = ENQUIRY_FORM_URL;
-      fallback.target = '_blank';
-      fallback.rel = 'noopener noreferrer';
-      contactPanel.append(intro, loading, fallback, contactFrame);
+      const fallback = el('p', 'Use Ask Construct to prepare an implementation brief, then copy or download it to share with the team.', 'ask-form-fallback');
+      loading.hidden = true;
+      contactFrame.hidden = true;
+      contactPanel.append(intro, fallback);
     }
     contactToggle.scrollIntoView({ block: 'nearest', behavior: 'auto' });
   }
@@ -517,7 +516,7 @@ export function mountAskTwin() {
       document.dispatchEvent(new Event('twin-contact-request'));
       if (window.TwinCore.getState().feature) window.TwinCore.navigate({ view: 'core' });
       const topicLabel = contactPanel.querySelector('.ask-contact-intro strong');
-      if (topicLabel) topicLabel.textContent = contactTopic ? 'Enquiry topic: ' + contactTopic : 'Tell Construct what you would like to explore.';
+      if (topicLabel) topicLabel.textContent = contactTopic ? 'Enquiry topic: ' + contactTopic : 'Tell Construct what construction workflow you would like to explore.';
       if (contactPanel.hidden) toggleContact();
       else contactToggle.scrollIntoView({ block: 'start', behavior: 'auto' });
       contactPanel.tabIndex = -1;
