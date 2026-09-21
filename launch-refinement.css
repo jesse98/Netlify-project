@@ -1,0 +1,53 @@
+/* Focused launch refinements; existing brand and orb styles stay authoritative. */
+body.jurosai-ui .memory-scenarios button[aria-pressed='true'] {
+  color: #126c9e;
+  background: #eaf4fa;
+  border-color: #9cc4db;
+  font-weight: 700;
+}
+body.jurosai-ui .memory-confirm {
+  margin: 14px 0;
+  padding: 14px;
+  border: 1px solid #c9dce8;
+  border-radius: 12px;
+  background: #fff;
+}
+body.jurosai-ui .memory-confirm .demo-button { margin: 4px 8px 4px 0; }
+body.jurosai-ui .memory-choices { flex-wrap: wrap; }
+body.jurosai-ui .memory-choices button,
+body.jurosai-ui .memory-scenarios button { min-height: 44px; }
+body.jurosai-ui .memory-showcase .demo-source strong { display: block; margin-block: 10px; }
+body.jurosai-ui .demo[data-demo='voice-overview'] .memory-cards { margin-block: 18px; }
+body.jurosai-ui .demo[data-demo='voice-overview'] .memory-card p { font-size: 14px; line-height: 1.6; }
+body.jurosai-ui .panel .feature-intro { font-size: 15px; line-height: 1.65; color: #536273; }
+.twin-data-dialog {
+  width: min(620px, calc(100vw - 32px));
+  max-height: calc(100dvh - 40px);
+  overflow-y: auto;
+  padding: 24px;
+  box-sizing: border-box;
+  color: #263b4c;
+  border: 1px solid #dce5eb;
+  border-radius: 18px;
+  background: #fff;
+}
+.twin-data-dialog::backdrop { background: #17203366; }
+.twin-data-dialog h2 { margin: 0 0 18px; font-size: 25px; }
+.twin-data-dialog h3 { font-size: 16px; margin: 20px 0 8px; }
+.twin-data-dialog p, .twin-data-dialog a { font-size: 15px; line-height: 1.65; }
+.twin-data-dialog a { color: #167cb4; }
+.twin-data-dialog .ask-text-button { min-height: 44px; }
+.twin-data-link { min-height: 44px; text-decoration: underline; text-underline-offset: 3px; }
+.ask-contact-intro { padding: 12px 16px 0; font-size: 13px; line-height: 1.6; color: #536273; }
+.ask-contact-intro strong { display: block; color: #263b4c; }
+.ask-contact-loading { padding: 12px 16px; font-size: 13px; color: #536273; }
+.ask-contact-loading[hidden] { display: none; }
+.ask-brief-dialog textarea { font-size: 16px; }
+.twin-site-footer { display: flex; justify-content: center; align-items: center; gap: 20px; padding: 24px 20px; color: #627181; font-size: 12px; }
+.twin-site-footer button { min-height: 44px; border: 0; background: none; color: #536273; font: inherit; text-decoration: underline; cursor: pointer; }
+.twin-data-dialog > .ask-text-button { display: block; margin-top: 16px; }
+body.chat-focused .twin-site-footer { display: none; }
+@media (min-width: 721px) and (max-width: 1000px) {
+  body.jurosai-ui .header-navigation { gap: 18px; }
+  body.jurosai-ui header .crumbs { max-width: 30vw; overflow: hidden; }
+}
