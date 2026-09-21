@@ -7,24 +7,22 @@
   const panelParent = detailPanel.parentElement;
   const query = $('query');
   const examples = [
-    'How could AI reduce my admin?',
-    'How could I respond to customer enquiries faster?',
     'What could I automate in my construction business?',
-    'How could I improve my online store?',
-    'Can you help me write and debug code?',
-    'How could my business apps work together?',
-    'How could I follow up leads more consistently?',
-    'How could I organise my emails and calendar?',
-    'How could I turn business data into useful reports?',
-    'How could I make customer replies more personal?'
+    'We use Procore and Xero. What could Construct automate?',
+    'How could AI process subcontractor quotes?',
+    'What happens when a variation comes through by email?',
+    'How could we automate invoice and purchase order admin?',
+    'How could Construct connect Outlook to our projects?',
+    'How could we spot material overruns earlier?',
+    'How could AI prepare our weekly project status report?'
   ];
   const benefits = {
-    identity: 'Remember your customers and the details that matter.',
-    communication: 'Communicate naturally, in your style and authorised voice.',
-    automation: 'Spend less time on paperwork, emails and routine work.',
-    sales: 'Keep enquiries, follow-ups and customer updates moving.',
-    crm: 'Connect the software you use and keep customer records together.',
-    privacy: 'Set who can access your data and how it is processed.'
+    identity: 'Understand each project, its people, documents and decisions.',
+    communication: 'Turn project correspondence into structured, useful context.',
+    automation: 'Automate repetitive work across the systems your team already uses.',
+    sales: 'Surface commercial changes, quote activity and potential cost pressure.',
+    crm: 'Connect Procore, Xero, Microsoft 365 and other supported construction systems.',
+    privacy: 'Keep sensitive actions controlled with permissions, approvals and audit history.'
   };
   const exampleButton = button('', () => {
     query.value = examples[exampleIndex];
@@ -151,7 +149,7 @@
       scheduleExamples();
       return;
     }
-    $('title').innerHTML = 'Twin <span>Intelligence</span>';
+    $('title').innerHTML = 'Construction <span>Intelligence</span>';
     $('subtitle').textContent = 'AI systems for construction businesses that connect existing software, automate repetitive work and turn project information into action.';
     $('command-area').hidden = false;
     $('hero-hit').hidden = true;
