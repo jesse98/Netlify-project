@@ -1,0 +1,943 @@
+/* Twin branding with the refined interface and primary navigation preserved. */
+body.jurosai-ui #home {
+  display: block;
+  width: auto;
+  height: auto;
+  min-height: 44px;
+  margin: 0;
+  padding: 4px 0;
+  gap: 0;
+  font-family: var(--font);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -.035em;
+  color: #0c182b;
+  text-align: left;
+  white-space: nowrap;
+}
+
+
+body.jurosai-ui #home .twin-wordmark-main {
+  display: block;
+  font-size: inherit;
+  line-height: 1;
+}
+
+body.jurosai-ui #home .twin-wordmark-subtitle {
+  display: block;
+  margin-top: 6px;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .2em;
+  color: #596b82;
+}
+
+body.jurosai-ui .title.jurosai-hero {
+  margin: 32px auto 0;
+  padding-inline: 24px;
+  min-height: 0;
+  height: auto;
+  max-width: 1140px;
+  text-align: center;
+}
+
+body.jurosai-ui .jurosai-hero #title {
+  margin: 0 auto;
+  width: auto;
+  max-width: none;
+  font-family: var(--font);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -.045em;
+  color: #0c182b;
+  white-space: normal;
+  text-wrap: balance;
+}
+
+body.jurosai-ui .jurosai-hero #subtitle {
+  display: block;
+  max-width: 640px;
+  margin: 16px auto 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #445467;
+  white-space: normal;
+  text-wrap: wrap;
+}
+
+body.jurosai-ui:not(.chat-focused) .jurosai-hero + #workspace #stage {
+  margin-top: 24px;
+}
+
+@media (max-width: 720px) {
+  body.jurosai-ui #home {
+    font-size: 30px;
+  }
+
+  body.jurosai-ui .title.jurosai-hero {
+    margin-top: 20px;
+    padding-inline: 20px;
+    max-width: 460px;
+  }
+
+  body.jurosai-ui .jurosai-hero #title {
+    font-size: clamp(30px, 8.8vw, 42px);
+  }
+
+  body.jurosai-ui.chat-focused #home {
+    font-size: 26px;
+    padding-block: 0;
+  }
+
+  body.jurosai-ui.chat-focused #home .twin-wordmark-subtitle {
+    margin-top: 3px;
+    font-size: 7px;
+  }
+
+  body.jurosai-ui .jurosai-hero #subtitle {
+    max-width: none;
+    font-size: 17px;
+  }
+
+  body.jurosai-ui:not(.chat-focused) .jurosai-hero + #workspace #stage {
+    margin-top: 14px;
+  }
+}
+
+@media (max-width: 350px) {
+  body.jurosai-ui .title.jurosai-hero {
+    padding-inline: 16px;
+  }
+}
+
+body.jurosai-ui .header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+body.jurosai-ui .header-navigation button {
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #445467;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+body.jurosai-ui .header-navigation button:hover {
+  color: var(--accent);
+}
+
+body.jurosai-ui #motion {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+body.jurosai-ui #motion:not([hidden]) + .header-navigation {
+  margin-left: 0;
+}
+
+body.jurosai-ui .navigation-toggle {
+  display: none;
+}
+
+body.jurosai-ui .navigation-menu {
+  position: fixed;
+  inset: 72px 16px auto auto;
+  width: calc(100% - 32px);
+  max-width: 360px;
+  max-height: calc(100dvh - 96px);
+  margin: 0;
+  padding: 12px 20px 20px;
+  box-sizing: border-box;
+  border: 1px solid #e1e9ef;
+  border-radius: 18px;
+  background: #fff;
+  color: #0c182b;
+  box-shadow: 0 16px 48px #0c182b14;
+}
+
+body.jurosai-ui .navigation-menu::backdrop {
+  background: #0c182b26;
+}
+
+body.jurosai-ui .navigation-menu-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #687a88;
+  font-size: 13px;
+}
+
+body.jurosai-ui .navigation-menu button {
+  min-height: 48px;
+  border: 0;
+  background: transparent;
+  color: #0c182b;
+  font-family: var(--font);
+  cursor: pointer;
+}
+
+body.jurosai-ui #navigation-close {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  padding: 0;
+  margin-right: -8px;
+}
+
+body.jurosai-ui .navigation-menu nav {
+  display: grid;
+  gap: 4px;
+}
+
+body.jurosai-ui .navigation-menu nav button {
+  padding: 8px 0;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+}
+
+body.jurosai-ui .navigation-menu nav button:hover {
+  color: var(--accent);
+}
+
+body.jurosai-ui .navigation-toggle svg,
+body.jurosai-ui #navigation-close svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 720px) {
+  body.jurosai-ui .header-navigation {
+    display: none;
+  }
+
+  body.jurosai-ui .navigation-toggle {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: -8px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #0c182b;
+    cursor: pointer;
+  }
+
+  body.jurosai-ui.mobile-panel-ui.chat-focused #stage {
+    right: 76px;
+  }
+
+  body.jurosai-ui #capabilities-heading,
+  body.jurosai-ui #ask-contact-form {
+    scroll-margin-top: 16px;
+  }
+}
+
+/* Shared finish: quiet surfaces, precise controls and one spacing rhythm. */
+body.jurosai-ui {
+  --jurosai-ink: #0c182b;
+  --jurosai-body: #445467;
+  --jurosai-edge: #dce5ed;
+  --jurosai-surface: #f8fafc;
+  --jurosai-ease: cubic-bezier(.22, 1, .36, 1);
+  font-kerning: normal;
+  -webkit-font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+body.jurosai-ui [hidden] {
+  display: none !important;
+}
+
+body.jurosai-ui .jurosai-hero #subtitle {
+  text-wrap: pretty;
+}
+
+body.jurosai-ui #command {
+  box-sizing: border-box;
+  min-height: 54px;
+  height: auto;
+  align-items: flex-end;
+  padding: 4px;
+  border: 1px solid #bccdd9;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 2px 4px #18384d04, 0 8px 24px #18384d06;
+  transition: border-color 220ms ease, box-shadow 220ms ease;
+}
+
+body.jurosai-ui #command:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px #167cb410, 0 8px 28px #18384d0a;
+}
+
+body.jurosai-ui #command #query {
+  min-height: 44px;
+  padding: 11px 12px;
+  line-height: 22px;
+  color: var(--jurosai-ink);
+}
+
+body.jurosai-ui #command .icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  border-radius: 14px;
+  color: #465a6b;
+  transition: color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+body.jurosai-ui #command .icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+body.jurosai-ui #command .icon:last-child {
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  background: transparent;
+  box-shadow: none;
+  font-size: 19px;
+  line-height: 1;
+}
+
+/* The visible button is 36px; its interactive area stays 44px. */
+body.jurosai-ui #command .icon:last-child::before {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 4px;
+  z-index: -1;
+  border-radius: 11px;
+  background: var(--accent);
+  box-shadow: inset 0 1px 0 #ffffff24;
+  pointer-events: none;
+}
+
+body.jurosai-ui #command #mic[aria-pressed='true'] {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+body.jurosai-ui .question-example {
+  min-height: 70px;
+  gap: 4px;
+  padding: 4px 2px 8px;
+}
+
+body.jurosai-ui .question-example-label {
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: #667587;
+}
+
+body.jurosai-ui .question-example-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--jurosai-body);
+}
+
+body.jurosai-ui .ask-reading .ask-contact-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  column-gap: 10px;
+  row-gap: 0;
+  margin: 4px 0 12px;
+}
+
+body.jurosai-ui .ask-contact-button {
+  position: relative;
+  isolation: isolate;
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #38657e;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+/* A close-fitting outline inside an accessible touch target. */
+body.jurosai-ui .ask-contact-button::before {
+  content: '';
+  position: absolute;
+  inset: 7px 0;
+  z-index: -1;
+  border: 1px solid #d0dee7;
+  background: #f1f3f5;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+body.jurosai-ui .ask-contact-button:hover {
+  background: transparent;
+}
+
+body.jurosai-ui .ask-contact-button:hover::before {
+  background: #e8edf1;
+  border-color: #8fbcd2;
+}
+
+body.jurosai-ui .ask-reading .ask-privacy {
+  flex: 0 1 auto;
+  min-width: 0;
+  margin: 0 0 0 auto;
+  font-size: 11px;
+  color: #536173;
+}
+
+body.jurosai-ui .ask-privacy summary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 44px;
+  padding: 0 2px;
+  list-style: none;
+  white-space: nowrap;
+}
+
+body.jurosai-ui .ask-privacy summary::-webkit-details-marker {
+  display: none;
+}
+
+body.jurosai-ui .ask-privacy summary::before {
+  content: '▸';
+  margin-right: 5px;
+}
+
+body.jurosai-ui .ask-privacy[open] summary::before {
+  content: '▾';
+}
+
+body.jurosai-ui .ask-reading .ask-privacy[open] {
+  flex-basis: 100%;
+  margin-bottom: 8px;
+}
+
+body.jurosai-ui .ask-privacy p {
+  margin: 0 0 10px;
+  color: #445467;
+}
+
+body.jurosai-ui .ask-contact-panel {
+  flex: 0 0 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin-top: 8px;
+}
+
+body.jurosai-ui .ask-chip,
+body.jurosai-ui .ask-resume,
+body.jurosai-ui .demo-button,
+body.jurosai-ui .ask-handoff {
+  min-height: 44px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+body.jurosai-ui .ask-chip {
+  padding: 10px 14px;
+  background: #f6f9fc;
+  border-color: var(--jurosai-edge);
+  color: #245d7d;
+}
+
+body.jurosai-ui .ask-history-arrow,
+body.jurosai-ui .capability-sheet-close {
+  border-radius: 12px;
+}
+
+body.jurosai-ui .ask-toolbar {
+  padding-bottom: 10px;
+  border-color: var(--jurosai-edge);
+}
+
+body.jurosai-ui .ask-label {
+  font-size: 14px;
+  letter-spacing: -.015em;
+}
+
+body.jurosai-ui .ask-speaker {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
+body.jurosai-ui .ask-message p {
+  line-height: 1.7;
+  color: #314557;
+}
+
+body.jurosai-ui .ask-user p {
+  color: var(--jurosai-ink);
+}
+
+body.jurosai-ui .ask-message + .ask-message {
+  border-color: #e7edf2;
+}
+
+body.jurosai-ui .ask-working {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #486779;
+}
+
+body.jurosai-ui .ask-working::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+body.jurosai-ui .ask-brief-dialog,
+body.jurosai-ui .ask-history-dialog,
+body.jurosai-ui #voice-dialog,
+body.jurosai-ui #browse-dialog {
+  border: 1px solid var(--jurosai-edge);
+  border-radius: 20px;
+  box-shadow: 0 20px 70px #0c182b1c;
+}
+
+body.jurosai-ui dialog::backdrop {
+  background: #0c182b38;
+}
+
+body.jurosai-ui .navigation-menu {
+  border-radius: 20px;
+  box-shadow: 0 12px 48px #0c182b14;
+}
+
+body.jurosai-ui #navigation-motion {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--jurosai-edge);
+  border-radius: 0;
+  color: #536779;
+  font-size: 13px;
+  text-align: left;
+}
+
+body.jurosai-ui .panel h2,
+body.jurosai-ui .capability-sheet-header h2 {
+  letter-spacing: -.025em;
+  font-weight: 700;
+  color: var(--jurosai-ink);
+}
+
+body.jurosai-ui .panel .demo {
+  border: 1px solid var(--jurosai-edge);
+  border-radius: 16px;
+  background: var(--jurosai-surface);
+}
+
+body.jurosai-ui .panel .visual span {
+  border-radius: 10px;
+  border-color: var(--jurosai-edge);
+}
+
+body.jurosai-ui .ask-contact-button,
+body.jurosai-ui .ask-chip,
+body.jurosai-ui .ask-history-arrow,
+body.jurosai-ui .system-button,
+body.jurosai-ui .system-feature,
+body.jurosai-ui .demo-button {
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+@media (min-width: 721px) {
+  body.jurosai-ui .panel {
+    padding: 28px;
+    border: 1px solid var(--jurosai-edge);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px #18384d06;
+    background: #fff;
+  }
+
+  body.jurosai-ui .ask-reading {
+    padding-inline: 4px;
+    box-sizing: border-box;
+  }
+
+  body.jurosai-ui .ask-dock {
+    padding-block: 14px;
+  }
+}
+
+@media (max-width: 720px) {
+  body.jurosai-ui.mobile-panel-ui:not(.chat-focused) #stage {
+    height: 224px;
+  }
+
+  body.jurosai-ui.mobile-panel-ui #stage .orb {
+    filter: none;
+  }
+
+  body.jurosai-ui.mobile-panel-ui .capability-panel {
+    margin-top: 24px;
+  }
+
+  body.jurosai-ui.mobile-panel-ui .capability-heading {
+    margin-bottom: 16px;
+  }
+
+  body.jurosai-ui.mobile-panel-ui .capability-heading h2 {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -.025em;
+  }
+
+  body.jurosai-ui.mobile-panel-ui .capability-grid {
+    overflow: hidden;
+    border: 1px solid var(--jurosai-edge);
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  body.jurosai-ui.mobile-panel-ui .system-button {
+    min-height: 106px;
+    padding: 16px;
+    border-color: var(--jurosai-edge);
+    background: transparent;
+  }
+
+  body.jurosai-ui.mobile-panel-ui .system-name {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.45;
+  }
+
+  body.jurosai-ui.mobile-panel-ui .system-count {
+    font-size: 11px;
+    color: #657687;
+  }
+
+  body.jurosai-ui.mobile-panel-ui .system-button:active,
+  body.jurosai-ui.mobile-panel-ui .system-button[data-selected='true'],
+  body.jurosai-ui .system-feature:active {
+    background: #f3f8fc;
+  }
+
+  body.jurosai-ui.mobile-panel-ui .mobile-capability-sheet {
+    border-radius: 22px 22px 0 0;
+  }
+
+  body.jurosai-ui .capability-sheet-header {
+    padding: 16px 16px 14px 20px;
+    border-color: var(--jurosai-edge);
+  }
+
+  body.jurosai-ui .capability-sheet-content {
+    padding-top: 12px;
+  }
+
+  body.jurosai-ui .system-feature {
+    min-height: 60px;
+    padding: 16px 0;
+    font-size: 15px;
+    border-color: var(--jurosai-edge);
+  }
+
+  body.jurosai-ui.mobile-panel-ui.chat-focused .ask-dock {
+    box-shadow: 0 -4px 24px #18384d05;
+    border-color: var(--jurosai-edge);
+  }
+}
+
+@media (hover: hover) {
+  body.jurosai-ui #command #mic:hover {
+    background: #f1f6fa;
+    color: var(--accent);
+  }
+
+  body.jurosai-ui #command .icon:last-child:hover::before {
+    background: #126e9f;
+  }
+
+  body.jurosai-ui .system-button:hover,
+  body.jurosai-ui .system-feature:hover {
+    background: #f5f9fc;
+  }
+}
+
+@keyframes jurosai-menu-enter {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes jurosai-thinking {
+  0%, 100% { opacity: .45; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body.jurosai-ui:not(.motion-off) .navigation-menu[open],
+  body.jurosai-ui:not(.motion-off) .ask-history-dialog[open],
+  body.jurosai-ui:not(.motion-off) .ask-brief-dialog[open] {
+    animation: jurosai-menu-enter 220ms var(--jurosai-ease);
+  }
+
+  body.jurosai-ui:not(.motion-off) .mobile-capability-sheet[open] {
+    animation-duration: 300ms;
+    animation-timing-function: var(--jurosai-ease);
+  }
+
+  body.jurosai-ui:not(.motion-off) .ask-working::before {
+    animation: jurosai-thinking 2.4s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.jurosai-ui *,
+  body.jurosai-ui *::before,
+  body.jurosai-ui *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+body.jurosai-ui .demo[data-demo='document'] .demo-output {
+  min-height: 0;
+  margin-block: 16px;
+}
+
+/* Layout settles immediately; the canvas supplies the centred entrance. */
+body.jurosai-ui .core-side,
+body.jurosai-ui #stage,
+body.jurosai-ui #orb {
+  transition: none !important;
+}
+body.jurosai-ui #orb {
+  animation: none !important;
+}
+
+/* Memory showcase: two concise scenarios, visible context and one clear action. */
+body.jurosai-ui .panel .memory-showcase {
+  margin: 16px 0 0;
+  padding: 18px;
+  min-width: 0;
+  border-color: #d7e3ec;
+  background: linear-gradient(145deg, #f8fafc, #f2f7fa);
+}
+body.jurosai-ui .memory-showcase .demo-label {
+  margin: 0 0 10px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #536779;
+}
+body.jurosai-ui .memory-showcase h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+  color: #172b40;
+}
+body.jurosai-ui .memory-showcase p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #445467;
+}
+body.jurosai-ui .memory-showcase .memory-intro { margin-bottom: 14px; }
+body.jurosai-ui .memory-scenarios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 16px;
+  padding: 4px;
+  border: 1px solid #d8e4ec;
+  border-radius: 12px;
+  background: #edf3f7;
+}
+body.jurosai-ui .memory-scenarios button {
+  min-height: 42px;
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #536779;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.35;
+  cursor: pointer;
+}
+body.jurosai-ui .memory-scenarios button[aria-selected='true'] {
+  background: #fff;
+  color: #15344c;
+  font-weight: 700;
+  box-shadow: 0 1px 5px #17344c14;
+}
+body.jurosai-ui .memory-workspace { display: grid; gap: 14px; }
+body.jurosai-ui .memory-context,
+body.jurosai-ui .memory-exchange {
+  padding: 14px;
+  border: 1px solid #d9e5ed;
+  border-radius: 13px;
+  background: #fff;
+}
+body.jurosai-ui .memory-showcase .memory-kicker {
+  margin-bottom: 9px;
+  color: #65788a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+body.jurosai-ui .memory-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+body.jurosai-ui .memory-card {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #e1e8ee;
+  border-left: 2px solid #a9c7d9;
+  border-radius: 9px;
+  background: #fbfcfd;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+body.jurosai-ui .memory-card.is-used {
+  border-color: #78b6d4;
+  border-left-color: #167cb4;
+  background: #f1f8fc;
+}
+body.jurosai-ui .memory-card span {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #718192;
+}
+body.jurosai-ui .memory-card strong {
+  display: block;
+  color: #233d52;
+  font-size: 12px;
+  line-height: 1.4;
+}
+body.jurosai-ui .memory-showcase .memory-prompt {
+  color: #1d3549;
+  font-size: 16px;
+  line-height: 1.5;
+}
+body.jurosai-ui .memory-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+body.jurosai-ui .memory-choices button {
+  min-height: 38px;
+  padding: 7px 10px;
+  border: 1px solid #d6e2ea;
+  border-radius: 999px;
+  background: #fff;
+  color: #536779;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+body.jurosai-ui .memory-choices button[aria-pressed='true'] {
+  border-color: #78b6d4;
+  background: #edf7fc;
+  color: #126c9e;
+  font-weight: 700;
+}
+body.jurosai-ui .memory-showcase [hidden] { display: none !important; }
+body.jurosai-ui .memory-result {
+  margin-top: 14px;
+  padding-top: 13px;
+  border-top: 1px solid #d8e5ee;
+}
+body.jurosai-ui .memory-result .memory-answer {
+  color: #175f89;
+  font-size: 15px;
+  line-height: 1.55;
+}
+body.jurosai-ui .memory-reason { margin-top: 9px; color: #536779; font-size: 12px; }
+body.jurosai-ui .memory-reason summary { min-height: 38px; display: flex; align-items: center; color: #36566e; cursor: pointer; }
+body.jurosai-ui .memory-reason .memory-reason-text { padding-top: 5px; font-size: 12px; line-height: 1.55; }
+body.jurosai-ui .memory-showcase > .memory-next {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  margin: 14px 0 0;
+  padding: 10px 14px;
+  border: 1px solid #167cb4;
+  border-radius: 10px;
+  background: #167cb4;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+body.jurosai-ui .memory-showcase > .memory-next:hover { background: #126b9c; }
+body.jurosai-ui .memory-scenarios button:focus-visible,
+body.jurosai-ui .memory-choices button:focus-visible,
+body.jurosai-ui .memory-showcase > .memory-next:focus-visible {
+  outline: 2px solid #0c182b;
+  outline-offset: 3px;
+}
+body.jurosai-ui .memory-showcase .memory-note {
+  margin-top: 9px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #627181;
+}
+body.jurosai-ui .memory-explanation {
+  margin-top: 10px;
+  color: #445467;
+  font-size: 13px;
+}
+body.jurosai-ui .memory-explanation summary {
+  display: list-item;
+  min-height: 44px;
+  padding-block: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+body.jurosai-ui .memory-explanation p { margin: 0 0 12px; font-size: 13px; line-height: 1.6; }
+@media (max-width: 720px) {
+  body.jurosai-ui .mobile-capability-sheet .panel .memory-showcase {
+    margin-top: 0;
+    padding: 16px;
+  }
+  body.jurosai-ui .memory-showcase h3 { font-size: 21px; }
+  body.jurosai-ui .memory-showcase .memory-intro { margin-bottom: 12px; }
+  body.jurosai-ui .memory-cards { grid-template-columns: 1fr 1fr; }
+}
