@@ -1,0 +1,323 @@
+[
+  {
+    "id": "identity",
+    "name": "Identity & Memory",
+    "description": "An AI identity shaped by your communication style, business knowledge and relevant customer context.",
+    "features": [
+      {
+        "id": "identity-personality",
+        "name": "Identity & Personality",
+        "description": "Configure tone, vocabulary, communication preferences and behavioural boundaries using approved examples.",
+        "inputs": "Approved examples",
+        "process": "Identity configuration",
+        "output": "Consistent communication",
+        "controls": "Review examples and boundaries before enabling customer-facing use."
+      },
+      {
+        "id": "business-knowledge",
+        "name": "Business Knowledge",
+        "description": "Retrieve relevant information from approved documents, products, policies and operating procedures.",
+        "inputs": "Approved documents",
+        "process": "Relevant retrieval",
+        "output": "Source-grounded response",
+        "controls": "Keep sources current and restrict retrieval to authorised documents."
+      },
+      {
+        "id": "persistent-memory",
+        "name": "Persistent Memory",
+        "description": "Retain relevant preferences, decisions and unresolved requests to support continuity between conversations.",
+        "inputs": "Relevant interactions",
+        "process": "Scoped memory",
+        "output": "Contextual continuity",
+        "controls": "Save selected facts with source and access boundaries, not indiscriminate transcripts."
+      },
+      {
+        "id": "relationship-context",
+        "name": "Relationship Context",
+        "description": "Bring together relevant history, current needs and outstanding commitments for an individual customer.",
+        "inputs": "Verified relationship",
+        "process": "Context assembly",
+        "output": "Customer summary",
+        "controls": "Confirm identity before joining context across channels."
+      },
+      {
+        "id": "memory-management",
+        "name": "Memory Management",
+        "description": "Review, correct and control saved information, including its source and permitted use.",
+        "inputs": "Saved context",
+        "process": "Review and correction",
+        "output": "Updated memory",
+        "controls": "Define retention and deletion arrangements for the implementation."
+      }
+    ]
+  },
+  {
+    "id": "communication",
+    "name": "Voice Cloning & Communication",
+    "description": "Consistent, personalised communication through contextual conversations and an authorised cloned voice.",
+    "features": [
+      {
+        "id": "voice-cloning",
+        "name": "Voice Cloning",
+        "description": "Configure an authorised voice identity for generated speech, with approved samples and usage controls.",
+        "inputs": "Authorised recordings",
+        "process": "Voice configuration",
+        "output": "Approved speech",
+        "controls": "Requires the voice owner’s permission and approved recordings. No cloned audio sample is connected to this preview."
+      },
+      {
+        "id": "conversational-intelligence",
+        "name": "Conversational Intelligence",
+        "description": "Interpret requests and manage multi-step conversations in the configured communication style.",
+        "inputs": "Customer request",
+        "process": "Context and intent",
+        "output": "Relevant response",
+        "controls": "Use approved knowledge and escalate requests outside the configured scope."
+      },
+      {
+        "id": "voice-messages",
+        "name": "Personalised Voice Messages",
+        "description": "Deliver spoken responses informed by the conversation and relevant available information.",
+        "inputs": "Approved response",
+        "process": "Voice generation",
+        "output": "Voice message",
+        "controls": "Requires authorised voice configuration and a supported delivery channel."
+      },
+      {
+        "id": "speech-interaction",
+        "name": "Speech Interaction",
+        "description": "Support spoken requests and audio responses where the selected interface and deployment allow them.",
+        "inputs": "Spoken request",
+        "process": "Recognition and routing",
+        "output": "Relevant response",
+        "controls": "Microphone access is opt-in. Speech-provider processing must be disclosed."
+      },
+      {
+        "id": "human-handover",
+        "name": "Human Handover",
+        "description": "Transfer relevant history and unresolved questions to an operator while pausing automated responses.",
+        "inputs": "Escalation condition",
+        "process": "Pause and transfer",
+        "output": "Human-led conversation",
+        "controls": "Automation must remain paused until an authorised operator resumes it."
+      }
+    ]
+  },
+  {
+    "id": "automation",
+    "name": "Business Automation",
+    "description": "Coordinate routine work across connected systems, with defined triggers, approval rules and operational visibility.",
+    "features": [
+      {
+        "id": "workflow-orchestration",
+        "name": "Workflow Orchestration",
+        "description": "Coordinate multi-step processes, conditions, approvals and exceptions across connected software.",
+        "inputs": "Defined trigger",
+        "process": "Controlled workflow",
+        "output": "Verified result",
+        "controls": "Apply approvals, duplicate-operation protection and exception handling."
+      },
+      {
+        "id": "email-automation",
+        "name": "Email Automation",
+        "description": "Identify messages requiring attention, prepare contextual responses and manage approved email workflows.",
+        "inputs": "Permitted email",
+        "process": "Triage and drafting",
+        "output": "Reviewed reply",
+        "controls": "Requires a supported mailbox connection. Sending scope and approval are configured separately."
+      },
+      {
+        "id": "calendar-tasks",
+        "name": "Calendar & Task Automation",
+        "description": "Coordinate appointments, reminders, assignments and outstanding commitments.",
+        "inputs": "Availability and tasks",
+        "process": "Scheduling rules",
+        "output": "Coordinated work",
+        "controls": "Check availability and time zones before committing appointments."
+      },
+      {
+        "id": "documents-data",
+        "name": "Document & Data Automation",
+        "description": "Extract information, prepare documents and update records through validation and review.",
+        "inputs": "Approved documents",
+        "process": "Extraction and review",
+        "output": "Structured records",
+        "controls": "Validate required fields and request human review where information is uncertain."
+      },
+      {
+        "id": "automated-briefings",
+        "name": "Automated Briefings & Reporting",
+        "description": "Assemble scheduled summaries of priorities, unresolved work, business changes and exceptions.",
+        "inputs": "Connected records",
+        "process": "Priority synthesis",
+        "output": "Owner briefing",
+        "controls": "Retain source context and show freshness. Missing information is not a zero."
+      }
+    ]
+  },
+  {
+    "id": "sales",
+    "name": "Sales & Customer Automation",
+    "description": "Manage the customer journey from first enquiry through conversion, delivery and ongoing engagement.",
+    "features": [
+      {
+        "id": "lead-qualification",
+        "name": "Lead Qualification & Routing",
+        "description": "Capture requirements, apply qualification criteria and route enquiries to the appropriate person or workflow.",
+        "inputs": "Incoming enquiry",
+        "process": "Qualification criteria",
+        "output": "Routed opportunity",
+        "controls": "Use business-approved criteria and retain a clear human escalation route."
+      },
+      {
+        "id": "nurturing-follow-up",
+        "name": "Nurturing & Follow-Up Automation",
+        "description": "Continue relevant conversations using customer context, timing rules and clear stopping conditions.",
+        "inputs": "Eligible conversation",
+        "process": "Contextual follow-through",
+        "output": "Relevant contact",
+        "controls": "Respect opt-outs and channel rules. Pause on replies, purchases or human takeover as configured."
+      },
+      {
+        "id": "pipeline-intelligence",
+        "name": "Pipeline Intelligence",
+        "description": "Surface stalled opportunities, missing information and potential next steps using connected deal records.",
+        "inputs": "Deal records",
+        "process": "Progress analysis",
+        "output": "Prioritised next steps",
+        "controls": "Requires a supported CRM connection. Recommendations are not guaranteed sales predictions."
+      },
+      {
+        "id": "customer-lifecycle",
+        "name": "Customer Lifecycle Automation",
+        "description": "Coordinate progress updates, delivery communication, aftercare and appropriate review or referral requests.",
+        "inputs": "Verified milestone",
+        "process": "Communication rules",
+        "output": "Customer update",
+        "controls": "Do not invent a delivery status or promise. Use verified operational records."
+      },
+      {
+        "id": "retention",
+        "name": "Re-engagement & Retention",
+        "description": "Reconnect with eligible inactive leads or customers using previous interests and relationship context.",
+        "inputs": "Eligible relationships",
+        "process": "Re-engagement rules",
+        "output": "Contextual outreach",
+        "controls": "Apply consent, suppression and frequency controls before contacting anyone."
+      }
+    ]
+  },
+  {
+    "id": "crm",
+    "name": "CRM & Integrations",
+    "description": "Explore customer relationship workflows and potential connections between Construction Intelligence and the systems your business already uses.",
+    "features": [
+      {
+        "id": "crm-workspace",
+        "name": "CRM Workspace",
+        "description": "Customer or fan records, conversation history, notes and the information required to manage each relationship.",
+        "inputs": "Relationship records",
+        "process": "Organised workspace",
+        "output": "Operator context",
+        "controls": "Keep channel identities and permissions explicit. Available workflows depend on connected systems."
+      },
+      {
+        "id": "content-commerce",
+        "name": "Content & Commerce",
+        "description": "Approved media, offers, bundles, pricing and purchase or delivery records for supported use cases.",
+        "inputs": "Approved catalogue",
+        "process": "Offer and eligibility",
+        "output": "Relevant content",
+        "controls": "Verify ownership, permitted channels, pricing and delivery status before offering content."
+      },
+      {
+        "id": "revenue-performance",
+        "name": "Revenue & Performance",
+        "description": "Sales visibility, conversion reporting and performance analysis with clear definitions and channel breakdowns.",
+        "inputs": "Transaction records",
+        "process": "Defined metrics",
+        "output": "Performance reporting",
+        "controls": "Preserve source currencies, fees and refunds. Do not merge incompatible conversion populations."
+      },
+      {
+        "id": "team-collaboration",
+        "name": "Team Collaboration",
+        "description": "Operator assignments, shared workflows, human oversight and access appropriate to each team member.",
+        "inputs": "Team permissions",
+        "process": "Assignment and review",
+        "output": "Coordinated response",
+        "controls": "Team workflows and permissions are configured for the implementation."
+      },
+      {
+        "id": "system-integrations",
+        "name": "System Integrations",
+        "description": "Supported connections to CRMs, email, calendars, messaging platforms and databases through connectors, APIs and webhooks.",
+        "inputs": "Supported connection",
+        "process": "Scoped data exchange",
+        "output": "Connected workflow",
+        "controls": "Connector availability and read/write scope are verified during implementation, not assumed."
+      }
+    ]
+  },
+  {
+    "id": "privacy",
+    "name": "Private Intelligence",
+    "description": "Deployment and governance options designed around how your organisation stores, accesses and processes information.",
+    "features": [
+      {
+        "id": "deployment",
+        "name": "Deployment Options",
+        "description": "Dedicated or customer-controlled environments scoped to an organisation’s requirements.",
+        "inputs": "Deployment requirements",
+        "process": "Environment design",
+        "output": "Agreed architecture",
+        "controls": "Custom deployment. Customer-controlled hosting does not automatically eliminate external processing."
+      },
+      {
+        "id": "access-permissions",
+        "name": "Access & Permissions",
+        "description": "Define which users, services and support personnel may access information or perform permitted operations.",
+        "inputs": "Authorised role",
+        "process": "Permission checks",
+        "output": "Scoped access",
+        "controls": "Specify support access, approval, time limits and revocation for the deployment."
+      },
+      {
+        "id": "data-boundaries",
+        "name": "Data & Memory Boundaries",
+        "description": "Control separation between organisations, customer relationships, creators and communication channels.",
+        "inputs": "Scoped information",
+        "process": "Boundary enforcement",
+        "output": "Permitted context",
+        "controls": "Identity verification and memory-sharing rules must be designed and tested."
+      },
+      {
+        "id": "audit-approvals",
+        "name": "Approval & Audit Controls",
+        "description": "Establish review requirements and maintain records of permitted operations, access and changes.",
+        "inputs": "Requested operation",
+        "process": "Approval and record",
+        "output": "Traceable outcome",
+        "controls": "Separate attempted work from successful delivery. Limit access to audit records."
+      },
+      {
+        "id": "data-lifecycle",
+        "name": "Data Lifecycle Management",
+        "description": "Define retention, export and deletion arrangements for business information and saved context.",
+        "inputs": "Stored information",
+        "process": "Lifecycle rules",
+        "output": "Managed retention",
+        "controls": "Include backups and provider retention when defining export and deletion arrangements."
+      },
+      {
+        "id": "ai-provider-controls",
+        "name": "AI Provider Controls",
+        "description": "Identify approved model and voice providers, the information they process and applicable configuration.",
+        "inputs": "Provider requirements",
+        "process": "Processing review",
+        "output": "Approved provider scope",
+        "controls": "Specify approved providers, retention, processing locations and permitted data flows."
+      }
+    ]
+  }
+]
