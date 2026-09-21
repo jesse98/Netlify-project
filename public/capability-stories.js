@@ -1,156 +1,25 @@
 'use strict';
-// Purpose-built fictional examples. These are not live customer records or AI calls.
+// Construction-specific fictional examples. No live customer records or external actions.
 window.TwinStories = Object.freeze({
-  'identity-personality': {
-    title: 'One message. Your way of speaking.',
-    facts: [['Approved style', 'Clear, warm and direct'], ['Boundary', 'No unverified delivery promises']],
-    question: '“Will my order arrive tomorrow?”',
-    action: 'Show the configured reply',
-    answer: '“Happy to check that for you. I’ll need the confirmed delivery update before giving you a date.”',
-    reason: 'The reply follows the approved style without inventing a delivery date. No order has been checked in this example.'
-  },
-  'business-knowledge': {
-    title: 'An answer with a source behind it',
-    facts: [['Approved policy · example v3', 'Returns within 30 days; unused items only'], ['Product record', 'Custom orders excluded']],
-    question: '“Can I return a custom-made item after two weeks?”',
-    action: 'Show the source-grounded answer',
-    answer: 'The example policy excludes custom-made items from its standard returns window. A team member should review any issue with the item before advising on the next step.',
-    reason: 'Uses policy v3 and the product exclusion together. This fictional policy is not legal advice or Construct’s own returns policy.'
-  },
-  'relationship-context': {
-    title: 'Pick up where the customer left off',
-    facts: [['Earlier conversation', 'Maya needs a booking website for a second studio'], ['Open decision', 'Keep the current brand or refresh it']],
-    question: '“Can we move ahead with the second location?”',
-    action: 'Show the contextual next step',
-    answer: 'Start with the second studio’s booking journey. Confirm the outstanding brand decision with Maya before preparing the new pages.',
-    reason: 'Uses an unresolved commitment, not just the customer’s name. Identity and permissions would be checked in a live implementation.'
-  },
-  'conversational-intelligence': {
-    title: 'Understand the request behind the words',
-    facts: [['First message', '“We lose enquiries while the team is on site.”'], ['Follow-up', '“Mostly calls, sometimes website messages.”']],
-    question: '“Where would you start?”',
-    action: 'Show a focused response',
-    answer: 'Start with capturing missed-call enquiries and a clear callback queue. Then bring website enquiries into that same review process, subject to checking the phone and website connections.',
-    reason: 'Combines both messages into one practical starting point instead of listing unrelated automations.'
-  },
-  'email-automation': {
-    title: 'Turn an email into a reviewable reply',
-    facts: [['Incoming email', 'Supplier asks whether an amended delivery date is acceptable'], ['Project constraint', 'Site access begins Monday']],
-    question: '“Can we accept delivery on Friday?”',
-    action: 'Show the draft approach',
-    answer: 'Flag the scheduling conflict and draft a request for Monday delivery. Ask the project owner to approve it before sending.',
-    reason: 'Uses the site-access constraint. No mailbox is connected and no email is sent.'
-  },
-  'calendar-tasks': {
-    title: 'Catch a scheduling conflict early',
-    facts: [['Proposed visit', 'Tuesday, 10:00–11:00 Brisbane time'], ['Example calendar', 'Team meeting, Tuesday, 10:30–11:30']],
-    question: '“Can this appointment go ahead?”',
-    action: 'Check the example schedule',
-    answer: 'The proposed visit overlaps the team meeting by 30 minutes. Ask for another time and check travel time before confirming an appointment.',
-    reason: 'Compares the two fictional time ranges. No appointment is booked.'
-  },
-  'lead-qualification': {
-    title: 'Put the right enquiry with the right person',
-    facts: [['Enquiry', 'Commercial fit-out, Sunshine Coast, six-week target'], ['Routing rule', 'Commercial projects go to the commercial estimator']],
-    question: '“Who should handle this, and what is missing?”',
-    action: 'Show the routing recommendation',
-    answer: 'Recommend the commercial estimator. Request the drawings and site-access details before assessing the six-week target.',
-    reason: 'Routes by an approved service rule, without inventing a quote or promising availability.'
-  },
-  'nurturing-follow-up': {
-    title: 'Follow up when it is appropriate',
-    facts: [['Approved rule', 'One follow-up after two days without a reply'], ['Latest event', 'Customer replied this morning']],
-    question: '“Should the scheduled follow-up continue?”',
-    action: 'Apply the stopping rule',
-    answer: 'No. The new reply stops the scheduled sequence. Review and respond to that message instead of sending another reminder.',
-    reason: 'Reply, opt-out and human takeover are stopping conditions. This example sends nothing.'
-  },
-  'pipeline-intelligence': {
-    title: 'See what is holding a deal back',
-    facts: [['Opportunity A', 'Proposal reviewed; decision-maker not confirmed'], ['Opportunity B', 'Scope agreed; awaiting a site visit']],
-    question: '“What deserves attention next?”',
-    action: 'Show the next-step analysis',
-    answer: 'For A, confirm who can approve the proposal. For B, arrange a site-visit proposal for review. Neither record supports predicting a guaranteed close.',
-    reason: 'Separates two different blockers using the available deal records, without treating missing data as progress.'
-  },
-  'customer-lifecycle': {
-    title: 'Keep a customer informed, accurately',
-    facts: [['Verified milestone', 'Installation complete'], ['Not yet verified', 'Final inspection outcome']],
-    question: '“What update can we give the customer?”',
-    action: 'Show the proposed update',
-    answer: 'Confirm that installation is complete and explain that final inspection is still awaiting confirmation. Do not describe the entire project as signed off.',
-    reason: 'Communicates the verified milestone without turning an unknown into a promise. Nothing is delivered externally.'
-  },
-  retention: {
-    title: 'Eligibility before outreach',
-    facts: [['Customer A', 'Inactive for 90 days; marketing permission recorded'], ['Customer B', 'Inactive for 90 days; opted out']],
-    question: '“Who could enter a re-engagement review?”',
-    action: 'Check the example eligibility',
-    answer: 'A may be reviewed against channel and frequency rules. B is excluded because of the opt-out. Inactivity alone is not permission to contact someone.',
-    reason: 'Checks consent before considering timing or past interests. No campaign is started.'
-  },
-  'crm-workspace': {
-    title: 'A relationship, not scattered notes',
-    facts: [['Website enquiry', 'Jordan requested an accessible bathroom renovation'], ['Verified follow-up', 'Site visit needed; owner: Alex']],
-    question: '“What should Alex see in the handover?”',
-    action: 'Show the example customer summary',
-    answer: 'Request: accessible bathroom renovation. Next step: propose a site visit. Owner: Alex. Budget and drawings: not provided.',
-    reason: 'Combines verified context and outstanding questions without inventing missing fields or joining unverified identities.'
-  },
-  'content-commerce': {
-    title: 'Offer only what is approved',
-    facts: [['Approved catalogue', 'Starter bundle, A$120, Australian delivery only'], ['Customer request', 'Delivery to New Zealand']],
-    question: '“Can this bundle be offered as requested?”',
-    action: 'Check the example offer',
-    answer: 'Not with the recorded delivery rules. Ask the team to verify New Zealand eligibility before quoting delivery or offering checkout.',
-    reason: 'Checks delivery eligibility as well as price. No purchase or fulfilment is created.'
-  },
-  'team-collaboration': {
-    title: 'A clear owner and a useful handover',
-    facts: [['Current owner', 'Alex, on leave'], ['Approved cover', 'Sam, service enquiries only']],
-    question: '“Who can pick up a new service enquiry?”',
-    action: 'Show the handover proposal',
-    answer: 'Propose Sam as the covering owner, with the relevant customer history and unresolved questions. Keep financial approvals outside Sam’s service-only scope.',
-    reason: 'Transfers context without extending the covering operator’s permissions. No live assignment is changed.'
-  },
-  'system-integrations': {
-    title: 'Verify a connection before relying on it',
-    facts: [['Requested workflow', 'Approved quote to accounting draft'], ['Connection status', 'Provider, API access and write permissions unverified']],
-    question: '“What has to be checked first?”',
-    action: 'Show the integration checklist',
-    answer: 'Verify the software plan, required API operations, permitted data, authentication and duplicate protection. Agree the approval step before any external draft is created.',
-    reason: 'A proposed integration is not an existing connector. This public site has no access to business accounts.'
-  },
-  'access-permissions': {
-    title: 'Permission follows the role',
-    facts: [['Role', 'Service operator'], ['Allowed', 'View assigned enquiries; prepare internal reply drafts']],
-    question: '“Can this operator export all customer records?”',
-    action: 'Show the permission decision',
-    answer: 'No. A service-only role does not include a bulk export. Route that request to an authorised administrator instead.',
-    reason: 'Illustrates a permission boundary; it does not claim the public website has live role-based access to customer data.'
-  },
-  'data-boundaries': {
-    title: 'Useful context, within the right boundary',
-    facts: [['Current workspace', 'Example Company A'], ['Requested source', 'A conversation belonging to Example Company B']],
-    question: '“Can that other conversation inform this answer?”',
-    action: 'Show the boundary decision',
-    answer: 'No. Keep the answer within Company A’s permitted sources. Do not retrieve Company B’s conversation to fill a gap.',
-    reason: 'Organisation and identity boundaries must be enforced and tested in the configured deployment.'
-  },
-  'data-lifecycle': {
-    title: 'Deletion has a defined scope',
-    facts: [['Request', 'Remove a customer’s saved context'], ['Locations to assess', 'Active records, backups and processing providers']],
-    question: '“What does a complete removal plan cover?”',
-    action: 'Show the lifecycle review',
-    answer: 'Check authority and retention obligations, define removal from active records, and state the separate backup and provider timelines. Confirm outcomes rather than promising instant deletion everywhere.',
-    reason: 'This is an architecture example, not a deletion request or an assertion about provider retention.'
-  },
-  'ai-provider-controls': {
-    title: 'Know what leaves the environment',
-    facts: [['Task', 'Summarise an approved service note'], ['Not needed', 'Payment details and unrelated customer records']],
-    question: '“What should the model receive?”',
-    action: 'Show the proposed data scope',
-    answer: 'Only the relevant approved note, with unnecessary sensitive details removed. Check the selected provider’s retention, processing location and access terms before enabling the workflow.',
-    reason: 'Provider settings are deployment decisions, not guarantees supplied by this public demonstration.'
-  }
+  'identity-personality': { title:'Know the project before acting', facts:[['Project','Queen Street Commercial Fitout'],['Client','Example Retail Group']], question:'“Which project does this request belong to?”', action:'Show the project match', answer:'Match the request to Queen Street Commercial Fitout, then use that project’s approved context for the next step.', reason:'Uses explicit project context. A live deployment would verify the match before acting.' },
+  'business-knowledge': { title:'Project knowledge with a source', facts:[['Approved document','Electrical scope rev 4'],['Open item','Lighting allowance']], question:'“What does the current scope say?”', action:'Show the grounded answer', answer:'Use revision 4 as the current approved source and flag the lighting allowance as an open item rather than filling the gap.', reason:'Keeps the answer tied to the approved project document.' },
+  'relationship-context': { title:'Connect the right trade to the right job', facts:[['Subcontractor','ABC Electrical'],['Project','Queen Street']], question:'“Who is handling electrical on Queen Street?”', action:'Show the project relationship', answer:'ABC Electrical is the recorded electrical subcontractor for the Queen Street example project.', reason:'A live implementation would verify company and project membership before joining context.' },
+  'conversational-intelligence': { title:'Understand construction correspondence', facts:[['Email','Revised electrical quote attached'],['Project reference','Queen Street']], question:'“What needs to happen?”', action:'Show the next step', answer:'Identify the revised quote, match it to Queen Street and ABC Electrical, extract the commercial change and prepare it for project-manager review.', reason:'Turns correspondence into a controlled project workflow.' },
+  'email-automation': { title:'Turn an email into project work', facts:[['Incoming email','Supplier delivery moved to Friday'],['Site constraint','Access begins Monday']], question:'“Can we accept Friday?”', action:'Show the workflow', answer:'Flag the access conflict and prepare a request for Monday delivery for review before anything is sent.', reason:'No mailbox is connected and no email is sent in this demonstration.' },
+  'calendar-tasks': { title:'Keep commitments from disappearing', facts:[['Commitment','Site inspection Tuesday'],['Conflict','PM meeting Tuesday 10:30']], question:'“What should Construct flag?”', action:'Show the scheduling check', answer:'Flag the overlap, identify the project owner and prepare an alternative time for review.', reason:'Uses verified commitments rather than inventing availability.' },
+  'lead-qualification': { title:'Bring context into estimating', facts:[['Request','Commercial fit-out quote'],['Missing','Drawings and site-access details']], question:'“Is this ready to price?”', action:'Show the estimating check', answer:'Not yet. Route it to estimating and request the drawings and access details before treating the scope as price-ready.', reason:'Prevents missing scope from becoming an invented assumption.' },
+  'nurturing-follow-up': { title:'Follow up quotes at the right time', facts:[['Quote','Issued two days ago'],['Latest event','Client replied this morning']], question:'“Should the scheduled follow-up go out?”', action:'Apply the stopping rule', answer:'No. The new reply stops the scheduled follow-up and should be reviewed instead.', reason:'This example sends nothing.' },
+  'pipeline-intelligence': { title:'Surface cost pressure earlier', facts:[['Estimate','A$42,600'],['Current commitment','A$47,850']], question:'“What should management see?”', action:'Show the variance', answer:'Flag a A$5,250 increase against the example estimate and ask the commercial owner to review the reason and project impact.', reason:'A variance is a review signal, not a guaranteed final margin outcome.' },
+  'customer-lifecycle': { title:'Spot a potential variation', facts:[['Original scope','Standard lighting'],['New request','Additional feature lighting']], question:'“Could this be a variation?”', action:'Show the variation review', answer:'Treat it as a potential scope change, collect the supporting correspondence and pricing, and route it for contractual and commercial review.', reason:'Does not issue or approve a variation automatically.' },
+  'retention': { title:'Compare material use with the estimate', facts:[['Estimated quantity','120 units'],['Purchased to date','138 units']], question:'“What should Construct do?”', action:'Show the material review', answer:'Flag the 18-unit difference and compare it with project progress, units and approved scope changes before calling it an overrun.', reason:'Avoids treating purchases alone as proof of waste.' },
+  'crm-workspace': { title:'One construction workspace', facts:[['Project','Queen Street'],['Open items','Quote review, supplier delivery']], question:'“What should the PM see?”', action:'Show the workspace summary', answer:'Show the project, responsible parties, current documents, open approvals and recent AI activity in one project context.', reason:'A live workspace remains separated by company and permissions.' },
+  'content-commerce': { title:'Check Procore access before relying on it', facts:[['Requested workflow','Read project and update a record'],['Connection','Not verified']], question:'“Can Construct do this through Procore?”', action:'Show the integration check', answer:'Potentially, subject to verifying the customer’s Procore plan, API access, required endpoints and write permissions.', reason:'A proposed integration is not an existing live connector.' },
+  'revenue-performance': { title:'Keep financial writes controlled', facts:[['Requested workflow','Create Xero draft'],['Approval rule','Human review required']], question:'“What happens before Xero is updated?”', action:'Show the control', answer:'Prepare the structured draft, show the source and project match, then require the configured human approval before any supported external write.', reason:'No Xero account is connected in this demonstration.' },
+  'team-collaboration': { title:'Use Microsoft 365 as project input', facts:[['Source','Outlook project inbox'],['Goal','Route correspondence to the right project']], question:'“How would it work?”', action:'Show the proposed flow', answer:'With authorised Microsoft access, classify incoming correspondence, match it to the project and prepare the appropriate workflow or review item.', reason:'Mailbox access and permissions must be verified first.' },
+  'system-integrations': { title:'Connect without replacing the stack', facts:[['Current systems','Procore, Xero, Microsoft 365'],['Goal','Reduce manual re-entry']], question:'“Where does Construct sit?”', action:'Show the integration approach', answer:'Construct can act as the intelligence and automation layer across supported operations, while the existing systems remain the systems of record.', reason:'Each API operation and permission is verified during implementation.' },
+  'access-permissions': { title:'Permission follows the role', facts:[['Role','Project member'],['Requested action','Approve financial variation']], question:'“Can this user approve it?”', action:'Show the permission decision', answer:'Not unless that role has the configured commercial approval authority. Route it to an authorised manager instead.', reason:'Illustrates a permission boundary.' },
+  'data-boundaries': { title:'Keep company data separated', facts:[['Workspace','Example Company A'],['Requested source','Example Company B project']], question:'“Can the other project fill this gap?”', action:'Show the boundary decision', answer:'No. Keep the answer within Company A’s permitted sources and leave the missing information unresolved.', reason:'Tenant boundaries must be enforced at the data layer.' },
+  'audit-approvals': { title:'Know what the AI proposed and who approved it', facts:[['AI proposal','Update revised quote record'],['Status','Awaiting PM approval']], question:'“What should the audit trail show?”', action:'Show the control', answer:'Record the source, proposed action, reviewer, approval decision and verified completion separately.', reason:'Proposed, approved and completed are different states.' },
+  'data-lifecycle': { title:'Project data has a lifecycle', facts:[['Request','Remove saved project context'],['Scope','Active records, backups, providers']], question:'“What should removal cover?”', action:'Show the lifecycle review', answer:'Check authority and retention obligations, remove eligible active context and state the separate backup and provider timelines.', reason:'Does not promise instant deletion everywhere.' },
+  'ai-provider-controls': { title:'Only send AI what it needs', facts:[['Task','Classify a supplier quote'],['Not needed','Unrelated employee records']], question:'“What should the model receive?”', action:'Show the data scope', answer:'Send only the relevant approved project information and exclude unrelated sensitive data.', reason:'Provider and retention settings are implementation decisions.' }
 });
