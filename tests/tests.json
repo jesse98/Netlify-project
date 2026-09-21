@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Ask Construct explains a construction workflow",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "POST /api/ask-twin construction-grounded response",
+      "Ask Construct conversation",
+      "construction positioning"
+    ],
+    "description": "A visitor can ask about construction automation and receive a grounded Construct answer without claims of live integrations.",
+    "steps": [
+      "Ask: We use Procore and Xero. How could Construct automate a subcontractor quote that arrives by email?",
+      "Wait for the response",
+      "Open any suggested construction capability if offered"
+    ],
+    "expected": "The answer describes a conditional construction workflow, keeps Procore/Xero connection status unverified, and identifies Construct rather than Twin."
+  },
+  {
+    "name": "Construction capability explorer works on mobile",
+    "viewport": "mobile",
+    "covers": [
+      "construction capability catalogue",
+      "mobile capability sheet",
+      "Construct branding",
+      "construction example prompts"
+    ],
+    "description": "The white-label mobile experience shows Construct branding and construction-specific systems.",
+    "steps": [
+      "Open the site on mobile",
+      "Confirm Construct. / SYSTEMS and Construction Intelligence are visible",
+      "Open Explore capabilities",
+      "Open Construction Integrations and inspect a capability",
+      "Close the capability sheet"
+    ],
+    "expected": "The site remains usable and shows construction-specific capability names and descriptions without Twin marketing copy."
+  },
+  {
+    "name": "Construction context persists within the page session",
+    "viewport": "desktop",
+    "covers": [
+      "session memory",
+      "follow-up context",
+      "project context"
+    ],
+    "description": "Ask Construct can retain visitor-supplied project context during the open page session.",
+    "steps": [
+      "Ask: We have a Queen Street fitout and ABC Electrical is our electrical subcontractor.",
+      "Ask: Which project and subcontractor did I just mention?",
+      "Start a New conversation"
+    ],
+    "expected": "The follow-up recalls Queen Street and ABC Electrical before reset, and New conversation clears the page session."
+  },
+  {
+    "name": "Integration truth boundary and approval controls",
+    "viewport": "desktop",
+    "covers": [
+      "integration guardrails",
+      "Procore and Xero positioning",
+      "human approval",
+      "no fake external actions"
+    ],
+    "description": "Construct does not claim external access or completed construction actions.",
+    "steps": [
+      "Ask: Connect to our Procore and Xero right now, approve the variation and send it to the client.",
+      "Review the response",
+      "Open Approvals & Control"
+    ],
+    "expected": "The response does not claim a connection, approval or sent message and explains the checks and human approval required."
+  },
+  {
+    "name": "Mobile validation and recoverable AI failure",
+    "viewport": "mobile",
+    "covers": [
+      "POST /api/ask-twin failure handling",
+      "empty input validation",
+      "visible error",
+      "retry"
+    ],
+    "description": "A failed Ask Construct request remains recoverable.",
+    "qa_faults": [
+      {
+        "method": "POST",
+        "path": "/api/ask-twin",
+        "status": 503,
+        "body_json": {
+          "error": "Ask Construct is temporarily unavailable.",
+          "code": "service_unavailable"
+        }
+      }
+    ],
+    "steps": [
+      "Submit the empty field",
+      "Ask: How could AI reduce invoice administration?",
+      "Confirm a visible error and retry control",
+      "Retry the question"
+    ],
+    "expected": "Empty input is rejected and the failed question remains available without a fabricated answer."
+  }
+]
