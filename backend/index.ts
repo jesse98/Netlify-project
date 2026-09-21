@@ -11,7 +11,7 @@ class RateLimitError extends Error {}
 // slightly. A platform/WAF atomic budget is required before high-traffic rollout.
 async function reserveRequest(sourceIp: string): Promise<void> {
   const now = Date.now();
-  const table = 'ask-rate-' + createHash('sha256').update('ask-twin-v1:' + sourceIp).digest('hex').slice(0, 32);
+  const table = 'ask-rate-' + createHash('sha256').update('ask-construct-v1:' + sourceIp).digest('hex').slice(0, 32);
   const { items, nextToken } = await db.list<RateRecord>(table, { limit: 50 });
   const stale = items.filter(item => item.createdAt < now - 3600000);
   if (stale.length) await db.delete(table, stale.map(item => item.id));
@@ -44,7 +44,7 @@ export const handler = router({
       if (caught instanceof RateLimitError) return response(429, 'You have reached this connection’s Ask Construct limit. Please try again later.', 'rate_limited', 60);
       if (caught instanceof InvalidModelResponse) {
         // A fixed reason code only: never log visitor data or rejected model text.
-        console.error('ask_twin_response_rejected', caught.message);
+        console.error('ask_construct_response_rejected', caught.message);
         return response(502, 'Construct could not verify that answer. Please retry or rephrase your question.', 'answer_validation_failed_' + caught.message);
       }
       const details = caught as { statusCode?: number; responseText?: string };
@@ -52,10 +52,10 @@ export const handler = router({
         const database = /AppDatabaseQuotaExceeded/.test(details.responseText || '');
         return response(429, database ? 'AppDeploy returned AppDatabaseQuotaExceeded. Please try again later.' : 'The AI service is currently rate-limited. Please try again later.', database ? 'AppDatabaseQuotaExceeded' : 'provider_rate_limited', 60);
       }
-      console.error('ask_twin_unavailable', caught instanceof Error ? caught.name : 'unknown_error');
+      console.error('ask_construct_unavailable', caught instanceof Error ? caught.name : 'unknown_error');
       return response(503, 'Ask Construct is temporarily unavailable. Your question has not been completed. Please try again.', 'service_unavailable');
     }
   }],
   // Platform health route; intentionally excluded from user-facing workflows.
-  'GET /api/_healthcheck': [async () => json({ status: 'ok', service: 'ask-twin-v1', streaming: false, enquiryDelivery: false })],
+  'GET /api/_healthcheck': [async () => json({ status: 'ok', service: 'ask-construct-v1', streaming: false, enquiryDelivery: false })],
 });
