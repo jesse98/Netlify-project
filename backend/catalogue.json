@@ -1,322 +1,322 @@
 [
   {
     "id": "identity",
-    "name": "Identity & Memory",
-    "description": "An AI identity shaped by your communication style, business knowledge and relevant customer context.",
+    "name": "Project Intelligence",
+    "description": "Understand projects, people, suppliers, subcontractors and the context that connects them.",
     "features": [
       {
         "id": "identity-personality",
-        "name": "Identity & Personality",
-        "description": "Configure tone, vocabulary, communication preferences and behavioural boundaries using approved examples.",
-        "inputs": "Approved examples",
-        "process": "Identity configuration",
-        "output": "Consistent communication",
-        "controls": "Review examples and boundaries before enabling customer-facing use."
+        "name": "Project Context",
+        "description": "Understand the project, scope, client, site, status and key constraints before recommending or automating work.",
+        "inputs": "Project records",
+        "process": "Context assembly",
+        "output": "Project-aware intelligence",
+        "controls": "Use verified project records and flag missing or conflicting information."
       },
       {
         "id": "business-knowledge",
-        "name": "Business Knowledge",
-        "description": "Retrieve relevant information from approved documents, products, policies and operating procedures.",
-        "inputs": "Approved documents",
+        "name": "Company & Project Knowledge",
+        "description": "Retrieve relevant information from approved project documents, company procedures, contracts and records.",
+        "inputs": "Approved sources",
         "process": "Relevant retrieval",
-        "output": "Source-grounded response",
-        "controls": "Keep sources current and restrict retrieval to authorised documents."
+        "output": "Grounded project answer",
+        "controls": "Keep sources current and preserve project and company boundaries."
       },
       {
         "id": "persistent-memory",
-        "name": "Persistent Memory",
-        "description": "Retain relevant preferences, decisions and unresolved requests to support continuity between conversations.",
-        "inputs": "Relevant interactions",
+        "name": "Project Memory",
+        "description": "Retain relevant decisions, constraints, commitments and unresolved items across the life of a project.",
+        "inputs": "Verified project events",
         "process": "Scoped memory",
-        "output": "Contextual continuity",
-        "controls": "Save selected facts with source and access boundaries, not indiscriminate transcripts."
+        "output": "Project continuity",
+        "controls": "Save useful facts with provenance rather than indiscriminate transcripts."
       },
       {
         "id": "relationship-context",
-        "name": "Relationship Context",
-        "description": "Bring together relevant history, current needs and outstanding commitments for an individual customer.",
-        "inputs": "Verified relationship",
-        "process": "Context assembly",
-        "output": "Customer summary",
-        "controls": "Confirm identity before joining context across channels."
+        "name": "Project Relationships",
+        "description": "Connect clients, suppliers, subcontractors and team members to the projects and responsibilities they belong to.",
+        "inputs": "Verified relationships",
+        "process": "Relationship mapping",
+        "output": "Connected project context",
+        "controls": "Confirm identity and project association before joining information."
       },
       {
         "id": "memory-management",
-        "name": "Memory Management",
-        "description": "Review, correct and control saved information, including its source and permitted use.",
+        "name": "Context Management",
+        "description": "Review, correct and remove saved project context so the intelligence layer stays accurate.",
         "inputs": "Saved context",
         "process": "Review and correction",
-        "output": "Updated memory",
-        "controls": "Define retention and deletion arrangements for the implementation."
+        "output": "Updated context",
+        "controls": "Keep corrections traceable and respect retention requirements."
       }
     ]
   },
   {
     "id": "communication",
-    "name": "Voice Cloning & Communication",
-    "description": "Consistent, personalised communication through contextual conversations and an authorised cloned voice.",
+    "name": "Communication Intelligence",
+    "description": "Understand construction email, messages and correspondence and route each item into the right project workflow.",
     "features": [
       {
         "id": "voice-cloning",
-        "name": "Voice Cloning",
-        "description": "Configure an authorised voice identity for generated speech, with approved samples and usage controls.",
-        "inputs": "Authorised recordings",
-        "process": "Voice configuration",
-        "output": "Approved speech",
-        "controls": "Requires the voice owner’s permission and approved recordings. No cloned audio sample is connected to this preview."
+        "name": "Email & Message Intake",
+        "description": "Capture authorised project communication and identify the project, sender, document and request involved.",
+        "inputs": "Email or message",
+        "process": "Classification and matching",
+        "output": "Structured communication",
+        "controls": "Verify mailbox access, project match and permitted data scope."
       },
       {
         "id": "conversational-intelligence",
-        "name": "Conversational Intelligence",
-        "description": "Interpret requests and manage multi-step conversations in the configured communication style.",
-        "inputs": "Customer request",
+        "name": "Construction Correspondence",
+        "description": "Interpret requests, questions and changes using the relevant project history and construction context.",
+        "inputs": "Project correspondence",
         "process": "Context and intent",
-        "output": "Relevant response",
-        "controls": "Use approved knowledge and escalate requests outside the configured scope."
+        "output": "Relevant response or action",
+        "controls": "Escalate ambiguity and never invent project facts."
       },
       {
         "id": "voice-messages",
-        "name": "Personalised Voice Messages",
-        "description": "Deliver spoken responses informed by the conversation and relevant available information.",
-        "inputs": "Approved response",
-        "process": "Voice generation",
-        "output": "Voice message",
-        "controls": "Requires authorised voice configuration and a supported delivery channel."
+        "name": "Client & Trade Updates",
+        "description": "Prepare accurate project updates for clients, subcontractors and suppliers using verified information.",
+        "inputs": "Verified project status",
+        "process": "Contextual drafting",
+        "output": "Reviewable update",
+        "controls": "Human approval can be required before external delivery."
       },
       {
         "id": "speech-interaction",
-        "name": "Speech Interaction",
-        "description": "Support spoken requests and audio responses where the selected interface and deployment allow them.",
-        "inputs": "Spoken request",
-        "process": "Recognition and routing",
-        "output": "Relevant response",
-        "controls": "Microphone access is opt-in. Speech-provider processing must be disclosed."
+        "name": "RFI & RFQ Intelligence",
+        "description": "Recognise information and quotation requests, gather relevant context and prepare the next step.",
+        "inputs": "RFI or RFQ",
+        "process": "Project-aware routing",
+        "output": "Prepared response workflow",
+        "controls": "Keep contractual and commercial approvals explicit."
       },
       {
         "id": "human-handover",
         "name": "Human Handover",
-        "description": "Transfer relevant history and unresolved questions to an operator while pausing automated responses.",
+        "description": "Escalate uncertain, sensitive or high-value matters to the right person with relevant context attached.",
         "inputs": "Escalation condition",
         "process": "Pause and transfer",
-        "output": "Human-led conversation",
-        "controls": "Automation must remain paused until an authorised operator resumes it."
+        "output": "Human-led decision",
+        "controls": "Automation remains paused until an authorised person continues it."
       }
     ]
   },
   {
     "id": "automation",
-    "name": "Business Automation",
-    "description": "Coordinate routine work across connected systems, with defined triggers, approval rules and operational visibility.",
+    "name": "Workflow Automation",
+    "description": "Turn incoming construction information into controlled, repeatable work across the systems the company already uses.",
     "features": [
       {
         "id": "workflow-orchestration",
         "name": "Workflow Orchestration",
-        "description": "Coordinate multi-step processes, conditions, approvals and exceptions across connected software.",
+        "description": "Coordinate triggers, checks, approvals, actions and exceptions across construction workflows.",
         "inputs": "Defined trigger",
         "process": "Controlled workflow",
         "output": "Verified result",
-        "controls": "Apply approvals, duplicate-operation protection and exception handling."
+        "controls": "Apply approvals, duplicate protection and exception handling."
       },
       {
         "id": "email-automation",
-        "name": "Email Automation",
-        "description": "Identify messages requiring attention, prepare contextual responses and manage approved email workflows.",
+        "name": "Email-to-Action Automation",
+        "description": "Turn relevant inbox traffic into project tasks, drafts, reviews and follow-ups instead of manual re-entry.",
         "inputs": "Permitted email",
-        "process": "Triage and drafting",
-        "output": "Reviewed reply",
-        "controls": "Requires a supported mailbox connection. Sending scope and approval are configured separately."
+        "process": "Triage and routing",
+        "output": "Reviewable action",
+        "controls": "Sending and external writes remain permission-controlled."
       },
       {
         "id": "calendar-tasks",
-        "name": "Calendar & Task Automation",
-        "description": "Coordinate appointments, reminders, assignments and outstanding commitments.",
-        "inputs": "Availability and tasks",
+        "name": "Scheduling & Follow-Ups",
+        "description": "Coordinate project reminders, commitments, follow-ups and assigned actions from verified project events.",
+        "inputs": "Project commitments",
         "process": "Scheduling rules",
         "output": "Coordinated work",
-        "controls": "Check availability and time zones before committing appointments."
+        "controls": "Check dates, owners and dependencies before committing changes."
       },
       {
         "id": "documents-data",
         "name": "Document & Data Automation",
-        "description": "Extract information, prepare documents and update records through validation and review.",
+        "description": "Read construction documents, extract structured fields and route them into the correct project process.",
         "inputs": "Approved documents",
-        "process": "Extraction and review",
-        "output": "Structured records",
-        "controls": "Validate required fields and request human review where information is uncertain."
+        "process": "Extraction and validation",
+        "output": "Structured project data",
+        "controls": "Flag uncertain fields for human review."
       },
       {
         "id": "automated-briefings",
-        "name": "Automated Briefings & Reporting",
-        "description": "Assemble scheduled summaries of priorities, unresolved work, business changes and exceptions.",
-        "inputs": "Connected records",
+        "name": "Automated Project Briefings",
+        "description": "Assemble concise project and company briefings from current priorities, changes, risks and unresolved work.",
+        "inputs": "Connected project records",
         "process": "Priority synthesis",
-        "output": "Owner briefing",
-        "controls": "Retain source context and show freshness. Missing information is not a zero."
+        "output": "Management briefing",
+        "controls": "Show source freshness and distinguish unknowns from zeroes."
       }
     ]
   },
   {
     "id": "sales",
-    "name": "Sales & Customer Automation",
-    "description": "Manage the customer journey from first enquiry through conversion, delivery and ongoing engagement.",
+    "name": "Commercial & Cost Intelligence",
+    "description": "Use project, quote, invoice and material information to surface commercial changes and potential cost issues earlier.",
     "features": [
       {
         "id": "lead-qualification",
-        "name": "Lead Qualification & Routing",
-        "description": "Capture requirements, apply qualification criteria and route enquiries to the appropriate person or workflow.",
-        "inputs": "Incoming enquiry",
-        "process": "Qualification criteria",
-        "output": "Routed opportunity",
-        "controls": "Use business-approved criteria and retain a clear human escalation route."
+        "name": "Estimating & Quote Context",
+        "description": "Bring scope, allowances, pricing and project context together to support faster estimating and quoting workflows.",
+        "inputs": "Scope and pricing data",
+        "process": "Commercial context",
+        "output": "Reviewable estimate inputs",
+        "controls": "Do not invent quantities, rates or contractual assumptions."
       },
       {
         "id": "nurturing-follow-up",
-        "name": "Nurturing & Follow-Up Automation",
-        "description": "Continue relevant conversations using customer context, timing rules and clear stopping conditions.",
-        "inputs": "Eligible conversation",
-        "process": "Contextual follow-through",
-        "output": "Relevant contact",
-        "controls": "Respect opt-outs and channel rules. Pause on replies, purchases or human takeover as configured."
+        "name": "Automated Quote Follow-Up",
+        "description": "Track eligible proposals and prepare follow-ups when agreed timing and stopping rules are met.",
+        "inputs": "Proposal status",
+        "process": "Follow-up rules",
+        "output": "Relevant follow-up",
+        "controls": "Stop on reply, decision, opt-out or human takeover."
       },
       {
         "id": "pipeline-intelligence",
-        "name": "Pipeline Intelligence",
-        "description": "Surface stalled opportunities, missing information and potential next steps using connected deal records.",
-        "inputs": "Deal records",
-        "process": "Progress analysis",
-        "output": "Prioritised next steps",
-        "controls": "Requires a supported CRM connection. Recommendations are not guaranteed sales predictions."
+        "name": "Cost & Margin Intelligence",
+        "description": "Compare estimates, commitments, purchases and progress to surface potential margin pressure and missing information.",
+        "inputs": "Commercial records",
+        "process": "Variance analysis",
+        "output": "Prioritised commercial review",
+        "controls": "Forecasts are decision support, not guaranteed final outcomes."
       },
       {
         "id": "customer-lifecycle",
-        "name": "Customer Lifecycle Automation",
-        "description": "Coordinate progress updates, delivery communication, aftercare and appropriate review or referral requests.",
-        "inputs": "Verified milestone",
-        "process": "Communication rules",
-        "output": "Customer update",
-        "controls": "Do not invent a delivery status or promise. Use verified operational records."
+        "name": "Variation Intelligence",
+        "description": "Identify potential scope changes, collect supporting context and prepare a controlled variation review workflow.",
+        "inputs": "Scope change evidence",
+        "process": "Change detection",
+        "output": "Variation review",
+        "controls": "Require appropriate contractual and commercial approval before issue."
       },
       {
         "id": "retention",
-        "name": "Re-engagement & Retention",
-        "description": "Reconnect with eligible inactive leads or customers using previous interests and relationship context.",
-        "inputs": "Eligible relationships",
-        "process": "Re-engagement rules",
-        "output": "Contextual outreach",
-        "controls": "Apply consent, suppression and frequency controls before contacting anyone."
+        "name": "Material Usage Intelligence",
+        "description": "Compare estimated quantities with purchased or delivered quantities and project progress to surface unusual consumption.",
+        "inputs": "Estimate, invoices and progress",
+        "process": "Quantity comparison",
+        "output": "Potential overrun signal",
+        "controls": "Validate units, invoice interpretation and physical progress before relying on a forecast."
       }
     ]
   },
   {
     "id": "crm",
-    "name": "CRM & Integrations",
-    "description": "Explore customer relationship workflows and potential connections between Construction Intelligence and the systems your business already uses.",
+    "name": "Construction Integrations",
+    "description": "Connect Construct to the construction, accounting and communication systems a business already uses.",
     "features": [
       {
         "id": "crm-workspace",
-        "name": "CRM Workspace",
-        "description": "Customer or fan records, conversation history, notes and the information required to manage each relationship.",
-        "inputs": "Relationship records",
+        "name": "Construction Workspace",
+        "description": "Bring project, contact, document, activity and AI workflow context into one management workspace.",
+        "inputs": "Company and project records",
         "process": "Organised workspace",
-        "output": "Operator context",
-        "controls": "Keep channel identities and permissions explicit. Available workflows depend on connected systems."
+        "output": "Operational context",
+        "controls": "Keep tenant, project and role boundaries explicit."
       },
       {
         "id": "content-commerce",
-        "name": "Content & Commerce",
-        "description": "Approved media, offers, bundles, pricing and purchase or delivery records for supported use cases.",
-        "inputs": "Approved catalogue",
-        "process": "Offer and eligibility",
-        "output": "Relevant content",
-        "controls": "Verify ownership, permitted channels, pricing and delivery status before offering content."
+        "name": "Procore Integration",
+        "description": "Connect approved Procore project data and workflows where the customer plan, API access and permissions support it.",
+        "inputs": "Verified Procore access",
+        "process": "Scoped data exchange",
+        "output": "Connected project workflow",
+        "controls": "Required endpoints and write permissions are verified during implementation."
       },
       {
         "id": "revenue-performance",
-        "name": "Revenue & Performance",
-        "description": "Sales visibility, conversion reporting and performance analysis with clear definitions and channel breakdowns.",
-        "inputs": "Transaction records",
-        "process": "Defined metrics",
-        "output": "Performance reporting",
-        "controls": "Preserve source currencies, fees and refunds. Do not merge incompatible conversion populations."
+        "name": "Xero Integration",
+        "description": "Connect approved accounting data and draft workflows while preserving human approval for financial writes where required.",
+        "inputs": "Verified Xero access",
+        "process": "Scoped accounting exchange",
+        "output": "Connected financial workflow",
+        "controls": "Approval, duplicate protection and accounting scope must be configured."
       },
       {
         "id": "team-collaboration",
-        "name": "Team Collaboration",
-        "description": "Operator assignments, shared workflows, human oversight and access appropriate to each team member.",
-        "inputs": "Team permissions",
-        "process": "Assignment and review",
-        "output": "Coordinated response",
-        "controls": "Team workflows and permissions are configured for the implementation."
+        "name": "Microsoft 365 Integration",
+        "description": "Use authorised Outlook and Microsoft 365 information as inputs to project communication and workflow automation.",
+        "inputs": "Verified Microsoft access",
+        "process": "Authorised communication flow",
+        "output": "Connected office workflow",
+        "controls": "Mailbox, tenant and permission scope are verified before use."
       },
       {
         "id": "system-integrations",
-        "name": "System Integrations",
-        "description": "Supported connections to CRMs, email, calendars, messaging platforms and databases through connectors, APIs and webhooks.",
+        "name": "Other Construction Systems",
+        "description": "Connect supported construction software through available APIs, webhooks and approved integration methods.",
         "inputs": "Supported connection",
-        "process": "Scoped data exchange",
+        "process": "Scoped integration",
         "output": "Connected workflow",
-        "controls": "Connector availability and read/write scope are verified during implementation, not assumed."
+        "controls": "Integration feasibility is checked rather than assumed."
       }
     ]
   },
   {
     "id": "privacy",
-    "name": "Private Intelligence",
-    "description": "Deployment and governance options designed around how your organisation stores, accesses and processes information.",
+    "name": "Approvals & Control",
+    "description": "Keep people in control of sensitive construction decisions with permissions, approvals, audit history and clear data boundaries.",
     "features": [
       {
         "id": "deployment",
-        "name": "Deployment Options",
-        "description": "Dedicated or customer-controlled environments scoped to an organisation’s requirements.",
-        "inputs": "Deployment requirements",
-        "process": "Environment design",
-        "output": "Agreed architecture",
-        "controls": "Custom deployment. Customer-controlled hosting does not automatically eliminate external processing."
+        "name": "Company Workspaces",
+        "description": "Separate each construction company into its own secure workspace and data boundary.",
+        "inputs": "Company account",
+        "process": "Tenant isolation",
+        "output": "Separated workspace",
+        "controls": "Isolation must be enforced at the data layer as well as the interface."
       },
       {
         "id": "access-permissions",
-        "name": "Access & Permissions",
-        "description": "Define which users, services and support personnel may access information or perform permitted operations.",
+        "name": "Roles & Permissions",
+        "description": "Define what owners, admins, managers, members and viewers may see or change.",
         "inputs": "Authorised role",
         "process": "Permission checks",
         "output": "Scoped access",
-        "controls": "Specify support access, approval, time limits and revocation for the deployment."
+        "controls": "Sensitive actions require the appropriate role."
       },
       {
         "id": "data-boundaries",
-        "name": "Data & Memory Boundaries",
-        "description": "Control separation between organisations, customer relationships, creators and communication channels.",
+        "name": "Project Data Boundaries",
+        "description": "Keep project, company and customer information within the correct authorised context.",
         "inputs": "Scoped information",
         "process": "Boundary enforcement",
         "output": "Permitted context",
-        "controls": "Identity verification and memory-sharing rules must be designed and tested."
+        "controls": "Never use another company’s data to fill a gap."
       },
       {
         "id": "audit-approvals",
-        "name": "Approval & Audit Controls",
-        "description": "Establish review requirements and maintain records of permitted operations, access and changes.",
-        "inputs": "Requested operation",
+        "name": "Human Approvals & Audit",
+        "description": "Require review for selected actions and maintain a traceable record of what the system proposed and what people approved.",
+        "inputs": "Requested action",
         "process": "Approval and record",
         "output": "Traceable outcome",
-        "controls": "Separate attempted work from successful delivery. Limit access to audit records."
+        "controls": "Separate proposed, approved and completed work."
       },
       {
         "id": "data-lifecycle",
-        "name": "Data Lifecycle Management",
-        "description": "Define retention, export and deletion arrangements for business information and saved context.",
+        "name": "Document & Data Lifecycle",
+        "description": "Define retention, export and deletion arrangements for project documents and saved context.",
         "inputs": "Stored information",
         "process": "Lifecycle rules",
         "output": "Managed retention",
-        "controls": "Include backups and provider retention when defining export and deletion arrangements."
+        "controls": "Include backups and provider retention in the implementation design."
       },
       {
         "id": "ai-provider-controls",
-        "name": "AI Provider Controls",
-        "description": "Identify approved model and voice providers, the information they process and applicable configuration.",
-        "inputs": "Provider requirements",
+        "name": "AI Processing Controls",
+        "description": "Define what project information AI providers may process and what must remain excluded or redacted.",
+        "inputs": "Approved data scope",
         "process": "Processing review",
-        "output": "Approved provider scope",
-        "controls": "Specify approved providers, retention, processing locations and permitted data flows."
+        "output": "Controlled AI scope",
+        "controls": "Provider, retention and processing requirements are implementation decisions."
       }
     ]
   }
