@@ -1,6 +1,6 @@
 'use strict';
 /** One source-derived Construct renderer for all viewports and the command icon.
- * Source: ConstructAssistant.tsx, blob 83bb5068a6d4ab517a9ce810c16d4bdccaa515a7.
+ * Source: TwinAssistant.tsx, blob 83bb5068a6d4ab517a9ce810c16d4bdccaa515a7.
  * The uploaded recording is a reference only, not a shipped video or bitmap.
  */
 (() => {
@@ -138,5 +138,5 @@
     }
     c.restore();
   }
-  window.ConstructOrbRenderer = Object.freeze({ revision: 'twin-source-video-2', sourceBlob: '83bb5068a6d4ab517a9ce810c16d4bdccaa515a7', particleCount: sphere.particles.length, linkCount: sphere.links.length, paint });
+  window.TwinOrbRenderer = Object.freeze({ revision: 'twin-source-video-2', sourceBlob: '83bb5068a6d4ab517a9ce810c16d4bdccaa515a7', particleCount: sphere.particles.length, linkCount: sphere.links.length, paint });
 })();
