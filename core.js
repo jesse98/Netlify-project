@@ -13,333 +13,49 @@ const makeFeature = (
 ) => ({ id, name, description, inputs, process, output, controls });
 const F = makeFeature;
 const CATALOGUE = [
-  {
-    id: 'identity',
-    name: 'Identity & Memory',
-    description:
-      'An AI identity shaped by your communication style, business knowledge and relevant customer context.',
-    features: [
-      F(
-        'identity-personality',
-        'Identity & Personality',
-        'Configure tone, vocabulary, communication preferences and behavioural boundaries using approved examples.',
-        'Approved examples',
-        'Identity configuration',
-        'Consistent communication',
-        'Review examples and boundaries before enabling customer-facing use.'
-      ),
-      F(
-        'business-knowledge',
-        'Business Knowledge',
-        'Retrieve relevant information from approved documents, products, policies and operating procedures.',
-        'Approved documents',
-        'Relevant retrieval',
-        'Source-grounded response',
-        'Keep sources current and restrict retrieval to authorised documents.'
-      ),
-      F(
-        'persistent-memory',
-        'Persistent Memory',
-        'Retain relevant preferences, decisions and unresolved requests to support continuity between conversations.',
-        'Relevant interactions',
-        'Scoped memory',
-        'Contextual continuity',
-        'Save selected facts with source and access boundaries, not indiscriminate transcripts.'
-      ),
-      F(
-        'relationship-context',
-        'Relationship Context',
-        'Bring together relevant history, current needs and outstanding commitments for an individual customer.',
-        'Verified relationship',
-        'Context assembly',
-        'Customer summary',
-        'Confirm identity before joining context across channels.'
-      ),
-      F(
-        'memory-management',
-        'Memory Management',
-        'Review, correct and control saved information, including its source and permitted use.',
-        'Saved context',
-        'Review and correction',
-        'Updated memory',
-        'Define retention and deletion arrangements for the implementation.'
-      ),
-    ],
-  },
-  {
-    id: 'communication',
-    name: 'Voice Cloning & Communication',
-    description:
-      'Consistent, personalised communication through contextual conversations and an authorised cloned voice.',
-    features: [
-      F(
-        'voice-cloning',
-        'Voice Cloning',
-        'Configure an authorised voice identity for generated speech, with approved samples and usage controls.',
-        'Authorised recordings',
-        'Voice configuration',
-        'Approved speech',
-        'Requires the voice owner’s permission and approved recordings. No cloned audio sample is connected to this preview.'
-      ),
-      F(
-        'conversational-intelligence',
-        'Conversational Intelligence',
-        'Interpret requests and manage multi-step conversations in the configured communication style.',
-        'Customer request',
-        'Context and intent',
-        'Relevant response',
-        'Use approved knowledge and escalate requests outside the configured scope.'
-      ),
-      F(
-        'voice-messages',
-        'Personalised Voice Messages',
-        'Deliver spoken responses informed by the conversation and relevant available information.',
-        'Approved response',
-        'Voice generation',
-        'Voice message',
-        'Requires authorised voice configuration and a supported delivery channel.'
-      ),
-      F(
-        'speech-interaction',
-        'Speech Interaction',
-        'Support spoken requests and audio responses where the selected interface and deployment allow them.',
-        'Spoken request',
-        'Recognition and routing',
-        'Relevant response',
-        'Microphone access is opt-in. Speech-provider processing must be disclosed.'
-      ),
-      F(
-        'human-handover',
-        'Human Handover',
-        'Transfer relevant history and unresolved questions to an operator while pausing automated responses.',
-        'Escalation condition',
-        'Pause and transfer',
-        'Human-led conversation',
-        'Automation must remain paused until an authorised operator resumes it.'
-      ),
-    ],
-  },
-  {
-    id: 'automation',
-    name: 'Business Automation',
-    description:
-      'Coordinate routine work across connected systems, with defined triggers, approval rules and operational visibility.',
-    features: [
-      F(
-        'workflow-orchestration',
-        'Workflow Orchestration',
-        'Coordinate multi-step processes, conditions, approvals and exceptions across connected software.',
-        'Defined trigger',
-        'Controlled workflow',
-        'Verified result',
-        'Apply approvals, duplicate-operation protection and exception handling.'
-      ),
-      F(
-        'email-automation',
-        'Email Automation',
-        'Identify messages requiring attention, prepare contextual responses and manage approved email workflows.',
-        'Permitted email',
-        'Triage and drafting',
-        'Reviewed reply',
-        'Requires a supported mailbox connection. Sending scope and approval are configured separately.'
-      ),
-      F(
-        'calendar-tasks',
-        'Calendar & Task Automation',
-        'Coordinate appointments, reminders, assignments and outstanding commitments.',
-        'Availability and tasks',
-        'Scheduling rules',
-        'Coordinated work',
-        'Check availability and time zones before committing appointments.'
-      ),
-      F(
-        'documents-data',
-        'Document & Data Automation',
-        'Extract information, prepare documents and update records through validation and review.',
-        'Approved documents',
-        'Extraction and review',
-        'Structured records',
-        'Validate required fields and request human review where information is uncertain.'
-      ),
-      F(
-        'automated-briefings',
-        'Automated Briefings & Reporting',
-        'Assemble scheduled summaries of priorities, unresolved work, business changes and exceptions.',
-        'Connected records',
-        'Priority synthesis',
-        'Owner briefing',
-        'Retain source context and show freshness. Missing information is not a zero.'
-      ),
-    ],
-  },
-  {
-    id: 'sales',
-    name: 'Sales & Customer Automation',
-    description:
-      'Manage the customer journey from first enquiry through conversion, delivery and ongoing engagement.',
-    features: [
-      F(
-        'lead-qualification',
-        'Lead Qualification & Routing',
-        'Capture requirements, apply qualification criteria and route enquiries to the appropriate person or workflow.',
-        'Incoming enquiry',
-        'Qualification criteria',
-        'Routed opportunity',
-        'Use business-approved criteria and retain a clear human escalation route.'
-      ),
-      F(
-        'nurturing-follow-up',
-        'Nurturing & Follow-Up Automation',
-        'Continue relevant conversations using customer context, timing rules and clear stopping conditions.',
-        'Eligible conversation',
-        'Contextual follow-through',
-        'Relevant contact',
-        'Respect opt-outs and channel rules. Pause on replies, purchases or human takeover as configured.'
-      ),
-      F(
-        'pipeline-intelligence',
-        'Pipeline Intelligence',
-        'Surface stalled opportunities, missing information and potential next steps using connected deal records.',
-        'Deal records',
-        'Progress analysis',
-        'Prioritised next steps',
-        'Requires a supported CRM connection. Recommendations are not guaranteed sales predictions.'
-      ),
-      F(
-        'customer-lifecycle',
-        'Customer Lifecycle Automation',
-        'Coordinate progress updates, delivery communication, aftercare and appropriate review or referral requests.',
-        'Verified milestone',
-        'Communication rules',
-        'Customer update',
-        'Do not invent a delivery status or promise. Use verified operational records.'
-      ),
-      F(
-        'retention',
-        'Re-engagement & Retention',
-        'Reconnect with eligible inactive leads or customers using previous interests and relationship context.',
-        'Eligible relationships',
-        'Re-engagement rules',
-        'Contextual outreach',
-        'Apply consent, suppression and frequency controls before contacting anyone.'
-      ),
-    ],
-  },
-  {
-    id: 'crm',
-    name: 'CRM & Integrations',
-    description:
-      'Explore customer relationship workflows and potential connections between Construction Intelligence and the systems your business already uses.',
-    features: [
-      F(
-        'crm-workspace',
-        'CRM Workspace',
-        'Customer or fan records, conversation history, notes and the information required to manage each relationship.',
-        'Relationship records',
-        'Organised workspace',
-        'Operator context',
-        'Keep channel identities and permissions explicit. Available workflows depend on connected systems.'
-      ),
-      F(
-        'content-commerce',
-        'Content & Commerce',
-        'Approved media, offers, bundles, pricing and purchase or delivery records for supported use cases.',
-        'Approved catalogue',
-        'Offer and eligibility',
-        'Relevant content',
-        'Verify ownership, permitted channels, pricing and delivery status before offering content.'
-      ),
-      F(
-        'revenue-performance',
-        'Revenue & Performance',
-        'Sales visibility, conversion reporting and performance analysis with clear definitions and channel breakdowns.',
-        'Transaction records',
-        'Defined metrics',
-        'Performance reporting',
-        'Preserve source currencies, fees and refunds. Do not merge incompatible conversion populations.'
-      ),
-      F(
-        'team-collaboration',
-        'Team Collaboration',
-        'Operator assignments, shared workflows, human oversight and access appropriate to each team member.',
-        'Team permissions',
-        'Assignment and review',
-        'Coordinated response',
-        'Team workflows and permissions are configured for the implementation.'
-      ),
-      F(
-        'system-integrations',
-        'System Integrations',
-        'Supported connections to CRMs, email, calendars, messaging platforms and databases through connectors, APIs and webhooks.',
-        'Supported connection',
-        'Scoped data exchange',
-        'Connected workflow',
-        'Connector availability and read/write scope are verified during implementation, not assumed.'
-      ),
-    ],
-  },
-  {
-    id: 'privacy',
-    name: 'Private Intelligence',
-    description:
-      'Deployment and governance options designed around how your organisation stores, accesses and processes information.',
-    features: [
-      F(
-        'deployment',
-        'Deployment Options',
-        'Dedicated or customer-controlled environments scoped to an organisation’s requirements.',
-        'Deployment requirements',
-        'Environment design',
-        'Agreed architecture',
-        'Custom deployment. Customer-controlled hosting does not automatically eliminate external processing.'
-      ),
-      F(
-        'access-permissions',
-        'Access & Permissions',
-        'Define which users, services and support personnel may access information or perform permitted operations.',
-        'Authorised role',
-        'Permission checks',
-        'Scoped access',
-        'Specify support access, approval, time limits and revocation for the deployment.'
-      ),
-      F(
-        'data-boundaries',
-        'Data & Memory Boundaries',
-        'Control separation between organisations, customer relationships, creators and communication channels.',
-        'Scoped information',
-        'Boundary enforcement',
-        'Permitted context',
-        'Identity verification and memory-sharing rules must be designed and tested.'
-      ),
-      F(
-        'audit-approvals',
-        'Approval & Audit Controls',
-        'Establish review requirements and maintain records of permitted operations, access and changes.',
-        'Requested operation',
-        'Approval and record',
-        'Traceable outcome',
-        'Separate attempted work from successful delivery. Limit access to audit records.'
-      ),
-      F(
-        'data-lifecycle',
-        'Data Lifecycle Management',
-        'Define retention, export and deletion arrangements for business information and saved context.',
-        'Stored information',
-        'Lifecycle rules',
-        'Managed retention',
-        'Include backups and provider retention when defining export and deletion arrangements.'
-      ),
-      F(
-        'ai-provider-controls',
-        'AI Provider Controls',
-        'Identify approved model and voice providers, the information they process and applicable configuration.',
-        'Provider requirements',
-        'Processing review',
-        'Approved provider scope',
-        'Specify approved providers, retention, processing locations and permitted data flows.'
-      ),
-    ],
-  },
+  { id: "identity", name: "Project Intelligence", description: "Understand projects, people, suppliers, subcontractors and the context that connects them.", features: [
+    F("identity-personality", "Project Context", "Understand the project, scope, client, site, status and key constraints before recommending or automating work.", "Project records", "Context assembly", "Project-aware intelligence", "Use verified project records and flag missing or conflicting information."),
+    F("business-knowledge", "Company & Project Knowledge", "Retrieve relevant information from approved project documents, company procedures, contracts and records.", "Approved sources", "Relevant retrieval", "Grounded project answer", "Keep sources current and preserve project and company boundaries."),
+    F("persistent-memory", "Project Memory", "Retain relevant decisions, constraints, commitments and unresolved items across the life of a project.", "Verified project events", "Scoped memory", "Project continuity", "Save useful facts with provenance rather than indiscriminate transcripts."),
+    F("relationship-context", "Project Relationships", "Connect clients, suppliers, subcontractors and team members to the projects and responsibilities they belong to.", "Verified relationships", "Relationship mapping", "Connected project context", "Confirm identity and project association before joining information."),
+    F("memory-management", "Context Management", "Review, correct and remove saved project context so the intelligence layer stays accurate.", "Saved context", "Review and correction", "Updated context", "Keep corrections traceable and respect retention requirements.")
+  ] },
+  { id: "communication", name: "Communication Intelligence", description: "Understand construction email, messages and correspondence and route each item into the right project workflow.", features: [
+    F("voice-cloning", "Email & Message Intake", "Capture authorised project communication and identify the project, sender, document and request involved.", "Email or message", "Classification and matching", "Structured communication", "Verify mailbox access, project match and permitted data scope."),
+    F("conversational-intelligence", "Construction Correspondence", "Interpret requests, questions and changes using the relevant project history and construction context.", "Project correspondence", "Context and intent", "Relevant response or action", "Escalate ambiguity and never invent project facts."),
+    F("voice-messages", "Client & Trade Updates", "Prepare accurate project updates for clients, subcontractors and suppliers using verified information.", "Verified project status", "Contextual drafting", "Reviewable update", "Human approval can be required before external delivery."),
+    F("speech-interaction", "RFI & RFQ Intelligence", "Recognise information and quotation requests, gather relevant context and prepare the next step.", "RFI or RFQ", "Project-aware routing", "Prepared response workflow", "Keep contractual and commercial approvals explicit."),
+    F("human-handover", "Human Handover", "Escalate uncertain, sensitive or high-value matters to the right person with relevant context attached.", "Escalation condition", "Pause and transfer", "Human-led decision", "Automation remains paused until an authorised person continues it.")
+  ] },
+  { id: "automation", name: "Workflow Automation", description: "Turn incoming construction information into controlled, repeatable work across the systems the company already uses.", features: [
+    F("workflow-orchestration", "Workflow Orchestration", "Coordinate triggers, checks, approvals, actions and exceptions across construction workflows.", "Defined trigger", "Controlled workflow", "Verified result", "Apply approvals, duplicate protection and exception handling."),
+    F("email-automation", "Email-to-Action Automation", "Turn relevant inbox traffic into project tasks, drafts, reviews and follow-ups instead of manual re-entry.", "Permitted email", "Triage and routing", "Reviewable action", "Sending and external writes remain permission-controlled."),
+    F("calendar-tasks", "Scheduling & Follow-Ups", "Coordinate project reminders, commitments, follow-ups and assigned actions from verified project events.", "Project commitments", "Scheduling rules", "Coordinated work", "Check dates, owners and dependencies before committing changes."),
+    F("documents-data", "Document & Data Automation", "Read construction documents, extract structured fields and route them into the correct project process.", "Approved documents", "Extraction and validation", "Structured project data", "Flag uncertain fields for human review."),
+    F("automated-briefings", "Automated Project Briefings", "Assemble concise project and company briefings from current priorities, changes, risks and unresolved work.", "Connected project records", "Priority synthesis", "Management briefing", "Show source freshness and distinguish unknowns from zeroes.")
+  ] },
+  { id: "sales", name: "Commercial & Cost Intelligence", description: "Use project, quote, invoice and material information to surface commercial changes and potential cost issues earlier.", features: [
+    F("lead-qualification", "Estimating & Quote Context", "Bring scope, allowances, pricing and project context together to support faster estimating and quoting workflows.", "Scope and pricing data", "Commercial context", "Reviewable estimate inputs", "Do not invent quantities, rates or contractual assumptions."),
+    F("nurturing-follow-up", "Automated Quote Follow-Up", "Track eligible proposals and prepare follow-ups when agreed timing and stopping rules are met.", "Proposal status", "Follow-up rules", "Relevant follow-up", "Stop on reply, decision, opt-out or human takeover."),
+    F("pipeline-intelligence", "Cost & Margin Intelligence", "Compare estimates, commitments, purchases and progress to surface potential margin pressure and missing information.", "Commercial records", "Variance analysis", "Prioritised commercial review", "Forecasts are decision support, not guaranteed final outcomes."),
+    F("customer-lifecycle", "Variation Intelligence", "Identify potential scope changes, collect supporting context and prepare a controlled variation review workflow.", "Scope change evidence", "Change detection", "Variation review", "Require appropriate contractual and commercial approval before issue."),
+    F("retention", "Material Usage Intelligence", "Compare estimated quantities with purchased or delivered quantities and project progress to surface unusual consumption.", "Estimate, invoices and progress", "Quantity comparison", "Potential overrun signal", "Validate units, invoice interpretation and physical progress before relying on a forecast.")
+  ] },
+  { id: "crm", name: "Construction Integrations", description: "Connect Construct to the construction, accounting and communication systems a business already uses.", features: [
+    F("crm-workspace", "Construction Workspace", "Bring project, contact, document, activity and AI workflow context into one management workspace.", "Company and project records", "Organised workspace", "Operational context", "Keep tenant, project and role boundaries explicit."),
+    F("content-commerce", "Procore Integration", "Connect approved Procore project data and workflows where the customer plan, API access and permissions support it.", "Verified Procore access", "Scoped data exchange", "Connected project workflow", "Required endpoints and write permissions are verified during implementation."),
+    F("revenue-performance", "Xero Integration", "Connect approved accounting data and draft workflows while preserving human approval for financial writes where required.", "Verified Xero access", "Scoped accounting exchange", "Connected financial workflow", "Approval, duplicate protection and accounting scope must be configured."),
+    F("team-collaboration", "Microsoft 365 Integration", "Use authorised Outlook and Microsoft 365 information as inputs to project communication and workflow automation.", "Verified Microsoft access", "Authorised communication flow", "Connected office workflow", "Mailbox, tenant and permission scope are verified before use."),
+    F("system-integrations", "Other Construction Systems", "Connect supported construction software through available APIs, webhooks and approved integration methods.", "Supported connection", "Scoped integration", "Connected workflow", "Integration feasibility is checked rather than assumed.")
+  ] },
+  { id: "privacy", name: "Approvals & Control", description: "Keep people in control of sensitive construction decisions with permissions, approvals, audit history and clear data boundaries.", features: [
+    F("deployment", "Company Workspaces", "Separate each construction company into its own secure workspace and data boundary.", "Company account", "Tenant isolation", "Separated workspace", "Isolation must be enforced at the data layer as well as the interface."),
+    F("access-permissions", "Roles & Permissions", "Define what owners, admins, managers, members and viewers may see or change.", "Authorised role", "Permission checks", "Scoped access", "Sensitive actions require the appropriate role."),
+    F("data-boundaries", "Project Data Boundaries", "Keep project, company and customer information within the correct authorised context.", "Scoped information", "Boundary enforcement", "Permitted context", "Never use another company’s data to fill a gap."),
+    F("audit-approvals", "Human Approvals & Audit", "Require review for selected actions and maintain a traceable record of what the system proposed and what people approved.", "Requested action", "Approval and record", "Traceable outcome", "Separate proposed, approved and completed work."),
+    F("data-lifecycle", "Document & Data Lifecycle", "Define retention, export and deletion arrangements for project documents and saved context.", "Stored information", "Lifecycle rules", "Managed retention", "Include backups and provider retention in the implementation design."),
+    F("ai-provider-controls", "AI Processing Controls", "Define what project information AI providers may process and what must remain excluded or redacted.", "Approved data scope", "Processing review", "Controlled AI scope", "Provider, retention and processing requirements are implementation decisions.")
+  ] }
 ];
 const getCategory = id => CATALOGUE.find(c => c.id === id);
 function parseHash(hash) {
@@ -505,15 +221,15 @@ function render(previous) {
   $('crumbs').replaceChildren();
   $('status').textContent = '';
   if (!entered) {
-    $('title').innerHTML = 'Twin <span>Intelligence</span>';
+    $('title').innerHTML = 'Construction <span>Intelligence</span>';
     $('subtitle').textContent =
       'Construction intelligence, project context and automation—connected.';
   } else {
     if (c) $('title').textContent = c.name;
-    else $('title').innerHTML = 'Twin <span>Intelligence</span>';
+    else $('title').innerHTML = 'Construction <span>Intelligence</span>';
     $('subtitle').textContent = c
       ? c.description
-      : 'Select a system, or ask Twin about your business.';
+      : 'Select a system, or ask Construct about your construction business.';
     $('crumbs').append(button('Capabilities', () => navigate({ view: 'core' })));
     if (c) {
       $('crumbs').append(node('span', '/'));
