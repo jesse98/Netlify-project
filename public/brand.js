@@ -10,11 +10,11 @@
     const titleRegion = document.querySelector('.title');
     titleRegion.classList.toggle('jurosai-hero', hero);
     if (hero) {
-      $('title').innerHTML = 'Twin <span>Intelligence</span>';
+      $('title').innerHTML = 'Construction <span>Intelligence</span>';
       $('subtitle').textContent = description;
     }
     titleRegion.setAttribute('aria-label', hero ? 'Construction Intelligence' : $('title').textContent);
-    $('home').innerHTML = '<span class="twin-wordmark-main">Twin<span class="brand-dot">.</span></span><span class="twin-wordmark-subtitle">TECHNOLOGIES</span>';
+    $('home').innerHTML = '<span class="twin-wordmark-main">Construct<span class="brand-dot">.</span></span><span class="twin-wordmark-subtitle">SYSTEMS</span>';
     $('home').setAttribute('aria-label', 'Construct Systems home');
     $('hero-hit').setAttribute('aria-label', 'Explore capabilities');
     $('explore').innerHTML = 'Explore capabilities <span aria-hidden="true">↗</span>';
