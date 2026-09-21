@@ -1,22 +1,23 @@
 [
   {
     "id": 1,
-    "name": "Slow lead response",
-    "category": "Leads & acquisition",
+    "name": "Invoice administration",
+    "category": "Documents & finance",
     "systems": [
-      "sales",
+      "automation",
       "crm",
-      "identity"
+      "privacy"
     ],
     "possibleWorkflow": [
-      "Receive permitted enquiry",
-      "Retrieve relevant context",
-      "Answer and qualify",
-      "Route or request approval",
-      "Record verified outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Respect channel consent, opt-outs and human handover.",
-    "successMeasures": "Response time, qualification rate and bookings",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -25,22 +26,22 @@
   },
   {
     "id": 2,
-    "name": "Missed or unanswered enquiries",
-    "category": "Leads & acquisition",
+    "name": "Purchase order matching",
+    "category": "Communication",
     "systems": [
-      "sales",
-      "crm",
-      "identity"
+      "communication",
+      "automation"
     ],
     "possibleWorkflow": [
-      "Receive permitted enquiry",
-      "Retrieve relevant context",
-      "Answer and qualify",
-      "Route or request approval",
-      "Record verified outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Respect channel consent, opt-outs and human handover.",
-    "successMeasures": "Response time, qualification rate and bookings",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -49,22 +50,22 @@
   },
   {
     "id": 3,
-    "name": "Poor lead qualification",
-    "category": "Leads & acquisition",
+    "name": "Variation requests buried in email",
+    "category": "Commercial",
     "systems": [
       "sales",
-      "crm",
       "identity"
     ],
     "possibleWorkflow": [
-      "Receive permitted enquiry",
-      "Retrieve relevant context",
-      "Answer and qualify",
-      "Route or request approval",
-      "Record verified outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Respect channel consent, opt-outs and human handover.",
-    "successMeasures": "Response time, qualification rate and bookings",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -73,22 +74,22 @@
   },
   {
     "id": 4,
-    "name": "Leads routed incorrectly",
-    "category": "Leads & acquisition",
+    "name": "RFIs waiting for follow-up",
+    "category": "Project control",
     "systems": [
-      "sales",
-      "crm",
-      "identity"
+      "identity",
+      "privacy"
     ],
     "possibleWorkflow": [
-      "Receive permitted enquiry",
-      "Retrieve relevant context",
-      "Answer and qualify",
-      "Route or request approval",
-      "Record verified outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Respect channel consent, opt-outs and human handover.",
-    "successMeasures": "Response time, qualification rate and bookings",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -97,22 +98,23 @@
   },
   {
     "id": 5,
-    "name": "Inconsistent follow-up",
-    "category": "Leads & acquisition",
+    "name": "RFQs prepared manually",
+    "category": "Documents & finance",
     "systems": [
-      "sales",
+      "automation",
       "crm",
-      "identity"
+      "privacy"
     ],
     "possibleWorkflow": [
-      "Receive permitted enquiry",
-      "Retrieve relevant context",
-      "Answer and qualify",
-      "Route or request approval",
-      "Record verified outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Respect channel consent, opt-outs and human handover.",
-    "successMeasures": "Response time, qualification rate and bookings",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -121,22 +123,22 @@
   },
   {
     "id": 6,
-    "name": "Leads fragmented across channels",
-    "category": "Leads & acquisition",
+    "name": "Subcontractor quotes scattered across inboxes",
+    "category": "Communication",
     "systems": [
-      "sales",
-      "crm",
-      "identity"
+      "communication",
+      "automation"
     ],
     "possibleWorkflow": [
-      "Receive permitted enquiry",
-      "Retrieve relevant context",
-      "Answer and qualify",
-      "Route or request approval",
-      "Record verified outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Respect channel consent, opt-outs and human handover.",
-    "successMeasures": "Response time, qualification rate and bookings",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -145,22 +147,22 @@
   },
   {
     "id": 7,
-    "name": "Appointment or consultation no-shows",
-    "category": "Leads & acquisition",
+    "name": "Project emails filed manually",
+    "category": "Commercial",
     "systems": [
       "sales",
-      "crm",
       "identity"
     ],
     "possibleWorkflow": [
-      "Receive permitted enquiry",
-      "Retrieve relevant context",
-      "Answer and qualify",
-      "Route or request approval",
-      "Record verified outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Respect channel consent, opt-outs and human handover.",
-    "successMeasures": "Response time, qualification rate and bookings",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -169,22 +171,22 @@
   },
   {
     "id": 8,
-    "name": "Dormant leads not re-engaged",
-    "category": "Leads & acquisition",
+    "name": "Delivery dockets not linked to projects",
+    "category": "Project control",
     "systems": [
-      "sales",
-      "crm",
-      "identity"
+      "identity",
+      "privacy"
     ],
     "possibleWorkflow": [
-      "Receive permitted enquiry",
-      "Retrieve relevant context",
-      "Answer and qualify",
-      "Route or request approval",
-      "Record verified outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Respect channel consent, opt-outs and human handover.",
-    "successMeasures": "Response time, qualification rate and bookings",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -193,22 +195,23 @@
   },
   {
     "id": 9,
-    "name": "Opportunities going cold",
-    "category": "Sales",
+    "name": "Material quantities hard to compare with estimates",
+    "category": "Documents & finance",
     "systems": [
-      "sales",
+      "automation",
       "crm",
-      "identity"
+      "privacy"
     ],
     "possibleWorkflow": [
-      "Identify opportunity",
-      "Retrieve approved history",
-      "Draft appropriate next step",
-      "Obtain approval when required",
-      "Verify and record outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Do not invent customer interest, pipeline stage or predicted revenue.",
-    "successMeasures": "Follow-up completion, pipeline progression and conversion",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -217,22 +220,22 @@
   },
   {
     "id": 10,
-    "name": "Quotes or proposals not followed up",
-    "category": "Sales",
+    "name": "Cost overruns discovered late",
+    "category": "Communication",
     "systems": [
-      "sales",
-      "crm",
-      "identity"
+      "communication",
+      "automation"
     ],
     "possibleWorkflow": [
-      "Identify opportunity",
-      "Retrieve approved history",
-      "Draft appropriate next step",
-      "Obtain approval when required",
-      "Verify and record outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Do not invent customer interest, pipeline stage or predicted revenue.",
-    "successMeasures": "Follow-up completion, pipeline progression and conversion",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -241,22 +244,22 @@
   },
   {
     "id": 11,
-    "name": "Repetitive pre-sale questions",
-    "category": "Sales",
+    "name": "Weekly project status reporting",
+    "category": "Commercial",
     "systems": [
       "sales",
-      "crm",
       "identity"
     ],
     "possibleWorkflow": [
-      "Identify opportunity",
-      "Retrieve approved history",
-      "Draft appropriate next step",
-      "Obtain approval when required",
-      "Verify and record outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Do not invent customer interest, pipeline stage or predicted revenue.",
-    "successMeasures": "Follow-up completion, pipeline progression and conversion",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -265,22 +268,22 @@
   },
   {
     "id": 12,
-    "name": "Manual CRM updating",
-    "category": "Sales",
+    "name": "Site diary administration",
+    "category": "Project control",
     "systems": [
-      "sales",
-      "crm",
-      "identity"
+      "identity",
+      "privacy"
     ],
     "possibleWorkflow": [
-      "Identify opportunity",
-      "Retrieve approved history",
-      "Draft appropriate next step",
-      "Obtain approval when required",
-      "Verify and record outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Do not invent customer interest, pipeline stage or predicted revenue.",
-    "successMeasures": "Follow-up completion, pipeline progression and conversion",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -289,22 +292,23 @@
   },
   {
     "id": 13,
-    "name": "Poor pipeline visibility",
-    "category": "Sales",
+    "name": "Client updates assembled manually",
+    "category": "Documents & finance",
     "systems": [
-      "sales",
+      "automation",
       "crm",
-      "identity"
+      "privacy"
     ],
     "possibleWorkflow": [
-      "Identify opportunity",
-      "Retrieve approved history",
-      "Draft appropriate next step",
-      "Obtain approval when required",
-      "Verify and record outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Do not invent customer interest, pipeline stage or predicted revenue.",
-    "successMeasures": "Follow-up completion, pipeline progression and conversion",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -313,22 +317,22 @@
   },
   {
     "id": 14,
-    "name": "Salespeople missing customer context",
-    "category": "Sales",
+    "name": "Supplier follow-ups forgotten",
+    "category": "Communication",
     "systems": [
-      "sales",
-      "crm",
-      "identity"
+      "communication",
+      "automation"
     ],
     "possibleWorkflow": [
-      "Identify opportunity",
-      "Retrieve approved history",
-      "Draft appropriate next step",
-      "Obtain approval when required",
-      "Verify and record outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Do not invent customer interest, pipeline stage or predicted revenue.",
-    "successMeasures": "Follow-up completion, pipeline progression and conversion",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -337,22 +341,22 @@
   },
   {
     "id": 15,
-    "name": "Inconsistent sales processes",
-    "category": "Sales",
+    "name": "Project commitments spread across email and spreadsheets",
+    "category": "Commercial",
     "systems": [
       "sales",
-      "crm",
       "identity"
     ],
     "possibleWorkflow": [
-      "Identify opportunity",
-      "Retrieve approved history",
-      "Draft appropriate next step",
-      "Obtain approval when required",
-      "Verify and record outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Do not invent customer interest, pipeline stage or predicted revenue.",
-    "successMeasures": "Follow-up completion, pipeline progression and conversion",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -361,22 +365,22 @@
   },
   {
     "id": 16,
-    "name": "Poor sales-to-delivery handoff",
-    "category": "Sales",
+    "name": "Information duplicated between Procore and accounting",
+    "category": "Project control",
     "systems": [
-      "sales",
-      "crm",
-      "identity"
+      "identity",
+      "privacy"
     ],
     "possibleWorkflow": [
-      "Identify opportunity",
-      "Retrieve approved history",
-      "Draft appropriate next step",
-      "Obtain approval when required",
-      "Verify and record outcome"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Do not invent customer interest, pipeline stage or predicted revenue.",
-    "successMeasures": "Follow-up completion, pipeline progression and conversion",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -385,22 +389,23 @@
   },
   {
     "id": 17,
-    "name": "Repetitive customer enquiries",
-    "category": "Customer service & lifecycle",
+    "name": "Manual Xero draft preparation",
+    "category": "Documents & finance",
     "systems": [
-      "communication",
-      "identity",
-      "sales"
+      "automation",
+      "crm",
+      "privacy"
     ],
     "possibleWorkflow": [
-      "Understand request",
-      "Verify identity if needed",
-      "Retrieve approved information",
-      "Answer within scope",
-      "Escalate uncertainty and record"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Never fabricate order, account, delivery or project status.",
-    "successMeasures": "Resolution time, response accuracy and escalation rate",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -409,22 +414,22 @@
   },
   {
     "id": 18,
-    "name": "Slow customer response",
-    "category": "Customer service & lifecycle",
+    "name": "Project documents difficult to retrieve",
+    "category": "Communication",
     "systems": [
       "communication",
-      "identity",
-      "sales"
+      "automation"
     ],
     "possibleWorkflow": [
-      "Understand request",
-      "Verify identity if needed",
-      "Retrieve approved information",
-      "Answer within scope",
-      "Escalate uncertainty and record"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Never fabricate order, account, delivery or project status.",
-    "successMeasures": "Resolution time, response accuracy and escalation rate",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -433,22 +438,22 @@
   },
   {
     "id": 19,
-    "name": "Customers repeatedly explaining themselves",
-    "category": "Customer service & lifecycle",
+    "name": "Team permissions unclear",
+    "category": "Commercial",
     "systems": [
-      "communication",
-      "identity",
-      "sales"
+      "sales",
+      "identity"
     ],
     "possibleWorkflow": [
-      "Understand request",
-      "Verify identity if needed",
-      "Retrieve approved information",
-      "Answer within scope",
-      "Escalate uncertainty and record"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Never fabricate order, account, delivery or project status.",
-    "successMeasures": "Resolution time, response accuracy and escalation rate",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -457,22 +462,22 @@
   },
   {
     "id": 20,
-    "name": "Inconsistent answers between staff",
-    "category": "Customer service & lifecycle",
+    "name": "Approvals outside a traceable workflow",
+    "category": "Project control",
     "systems": [
-      "communication",
       "identity",
-      "sales"
+      "privacy"
     ],
     "possibleWorkflow": [
-      "Understand request",
-      "Verify identity if needed",
-      "Retrieve approved information",
-      "Answer within scope",
-      "Escalate uncertainty and record"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Never fabricate order, account, delivery or project status.",
-    "successMeasures": "Resolution time, response accuracy and escalation rate",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -481,22 +486,23 @@
   },
   {
     "id": 21,
-    "name": "Requests not properly escalated",
-    "category": "Customer service & lifecycle",
+    "name": "Quote follow-ups inconsistent",
+    "category": "Documents & finance",
     "systems": [
-      "communication",
-      "identity",
-      "sales"
+      "automation",
+      "crm",
+      "privacy"
     ],
     "possibleWorkflow": [
-      "Understand request",
-      "Verify identity if needed",
-      "Retrieve approved information",
-      "Answer within scope",
-      "Escalate uncertainty and record"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Never fabricate order, account, delivery or project status.",
-    "successMeasures": "Resolution time, response accuracy and escalation rate",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -505,22 +511,22 @@
   },
   {
     "id": 22,
-    "name": "Poor customer onboarding",
-    "category": "Customer service & lifecycle",
+    "name": "Project handovers missing context",
+    "category": "Communication",
     "systems": [
       "communication",
-      "identity",
-      "sales"
+      "automation"
     ],
     "possibleWorkflow": [
-      "Understand request",
-      "Verify identity if needed",
-      "Retrieve approved information",
-      "Answer within scope",
-      "Escalate uncertainty and record"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Never fabricate order, account, delivery or project status.",
-    "successMeasures": "Resolution time, response accuracy and escalation rate",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -529,22 +535,22 @@
   },
   {
     "id": 23,
-    "name": "Customers not receiving progress or status updates",
-    "category": "Customer service & lifecycle",
+    "name": "Inbox overload across multiple live jobs",
+    "category": "Commercial",
     "systems": [
-      "communication",
-      "identity",
-      "sales"
+      "sales",
+      "identity"
     ],
     "possibleWorkflow": [
-      "Understand request",
-      "Verify identity if needed",
-      "Retrieve approved information",
-      "Answer within scope",
-      "Escalate uncertainty and record"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Never fabricate order, account, delivery or project status.",
-    "successMeasures": "Resolution time, response accuracy and escalation rate",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
@@ -553,667 +559,22 @@
   },
   {
     "id": 24,
-    "name": "Weak retention or reactivation processes",
-    "category": "Customer service & lifecycle",
-    "systems": [
-      "communication",
-      "identity",
-      "sales"
-    ],
-    "possibleWorkflow": [
-      "Understand request",
-      "Verify identity if needed",
-      "Retrieve approved information",
-      "Answer within scope",
-      "Escalate uncertainty and record"
-    ],
-    "control": "Never fabricate order, account, delivery or project status.",
-    "successMeasures": "Resolution time, response accuracy and escalation rate",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 25,
-    "name": "Repetitive data entry",
-    "category": "Administration",
-    "systems": [
-      "automation",
-      "crm"
-    ],
-    "possibleWorkflow": [
-      "Receive input",
-      "Extract and validate",
-      "Apply rules",
-      "Request approval",
-      "Write to supported destination",
-      "Verify and record"
-    ],
-    "control": "Verify required read/write operations and use duplicate-operation protection.",
-    "successMeasures": "Hours spent, processing time and error/rework rate",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 26,
-    "name": "Copying information between systems",
-    "category": "Administration",
-    "systems": [
-      "automation",
-      "crm"
-    ],
-    "possibleWorkflow": [
-      "Receive input",
-      "Extract and validate",
-      "Apply rules",
-      "Request approval",
-      "Write to supported destination",
-      "Verify and record"
-    ],
-    "control": "Verify required read/write operations and use duplicate-operation protection.",
-    "successMeasures": "Hours spent, processing time and error/rework rate",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 27,
-    "name": "Inbox administration",
-    "category": "Administration",
-    "systems": [
-      "automation",
-      "crm"
-    ],
-    "possibleWorkflow": [
-      "Receive input",
-      "Extract and validate",
-      "Apply rules",
-      "Request approval",
-      "Write to supported destination",
-      "Verify and record"
-    ],
-    "control": "Verify required read/write operations and use duplicate-operation protection.",
-    "successMeasures": "Hours spent, processing time and error/rework rate",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 28,
-    "name": "Staff chasing missing information",
-    "category": "Administration",
-    "systems": [
-      "automation",
-      "crm"
-    ],
-    "possibleWorkflow": [
-      "Receive input",
-      "Extract and validate",
-      "Apply rules",
-      "Request approval",
-      "Write to supported destination",
-      "Verify and record"
-    ],
-    "control": "Verify required read/write operations and use duplicate-operation protection.",
-    "successMeasures": "Hours spent, processing time and error/rework rate",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 29,
-    "name": "Manual forms or record creation",
-    "category": "Administration",
-    "systems": [
-      "automation",
-      "crm"
-    ],
-    "possibleWorkflow": [
-      "Receive input",
-      "Extract and validate",
-      "Apply rules",
-      "Request approval",
-      "Write to supported destination",
-      "Verify and record"
-    ],
-    "control": "Verify required read/write operations and use duplicate-operation protection.",
-    "successMeasures": "Hours spent, processing time and error/rework rate",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 30,
-    "name": "Repetitive internal coordination",
-    "category": "Administration",
-    "systems": [
-      "automation",
-      "crm"
-    ],
-    "possibleWorkflow": [
-      "Receive input",
-      "Extract and validate",
-      "Apply rules",
-      "Request approval",
-      "Write to supported destination",
-      "Verify and record"
-    ],
-    "control": "Verify required read/write operations and use duplicate-operation protection.",
-    "successMeasures": "Hours spent, processing time and error/rework rate",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 31,
-    "name": "Manual recurring tasks",
-    "category": "Administration",
-    "systems": [
-      "automation",
-      "crm"
-    ],
-    "possibleWorkflow": [
-      "Receive input",
-      "Extract and validate",
-      "Apply rules",
-      "Request approval",
-      "Write to supported destination",
-      "Verify and record"
-    ],
-    "control": "Verify required read/write operations and use duplicate-operation protection.",
-    "successMeasures": "Hours spent, processing time and error/rework rate",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 32,
-    "name": "Administrative handoff failures",
-    "category": "Administration",
-    "systems": [
-      "automation",
-      "crm"
-    ],
-    "possibleWorkflow": [
-      "Receive input",
-      "Extract and validate",
-      "Apply rules",
-      "Request approval",
-      "Write to supported destination",
-      "Verify and record"
-    ],
-    "control": "Verify required read/write operations and use duplicate-operation protection.",
-    "successMeasures": "Hours spent, processing time and error/rework rate",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 33,
-    "name": "Manual invoice processing",
-    "category": "Finance operations",
-    "systems": [
-      "automation",
-      "crm",
-      "privacy"
-    ],
-    "possibleWorkflow": [
-      "Receive document",
-      "Extract supplier and amounts",
-      "Match project, PO and cost code",
-      "Validate exceptions",
-      "Obtain financial approval",
-      "Update supported systems",
-      "Verify and audit"
-    ],
-    "control": "Financial writes and payments require configured authority; preserve the visitor's human-approval decisions.",
-    "successMeasures": "Processing time, exception rate, approval time and data accuracy",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 34,
-    "name": "Invoice, project or PO matching",
-    "category": "Finance operations",
-    "systems": [
-      "automation",
-      "crm",
-      "privacy"
-    ],
-    "possibleWorkflow": [
-      "Receive document",
-      "Extract supplier and amounts",
-      "Match project, PO and cost code",
-      "Validate exceptions",
-      "Obtain financial approval",
-      "Update supported systems",
-      "Verify and audit"
-    ],
-    "control": "Financial writes and payments require configured authority; preserve the visitor's human-approval decisions.",
-    "successMeasures": "Processing time, exception rate, approval time and data accuracy",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 35,
-    "name": "Approval bottlenecks",
-    "category": "Finance operations",
-    "systems": [
-      "automation",
-      "crm",
-      "privacy"
-    ],
-    "possibleWorkflow": [
-      "Receive document",
-      "Extract supplier and amounts",
-      "Match project, PO and cost code",
-      "Validate exceptions",
-      "Obtain financial approval",
-      "Update supported systems",
-      "Verify and audit"
-    ],
-    "control": "Financial writes and payments require configured authority; preserve the visitor's human-approval decisions.",
-    "successMeasures": "Processing time, exception rate, approval time and data accuracy",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 36,
-    "name": "Expense or document processing",
-    "category": "Finance operations",
-    "systems": [
-      "automation",
-      "crm",
-      "privacy"
-    ],
-    "possibleWorkflow": [
-      "Receive document",
-      "Extract supplier and amounts",
-      "Match project, PO and cost code",
-      "Validate exceptions",
-      "Obtain financial approval",
-      "Update supported systems",
-      "Verify and audit"
-    ],
-    "control": "Financial writes and payments require configured authority; preserve the visitor's human-approval decisions.",
-    "successMeasures": "Processing time, exception rate, approval time and data accuracy",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 37,
-    "name": "Purchase-order administration",
-    "category": "Finance operations",
-    "systems": [
-      "automation",
-      "crm",
-      "privacy"
-    ],
-    "possibleWorkflow": [
-      "Receive document",
-      "Extract supplier and amounts",
-      "Match project, PO and cost code",
-      "Validate exceptions",
-      "Obtain financial approval",
-      "Update supported systems",
-      "Verify and audit"
-    ],
-    "control": "Financial writes and payments require configured authority; preserve the visitor's human-approval decisions.",
-    "successMeasures": "Processing time, exception rate, approval time and data accuracy",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 38,
-    "name": "Payment-status enquiries",
-    "category": "Finance operations",
-    "systems": [
-      "automation",
-      "crm",
-      "privacy"
-    ],
-    "possibleWorkflow": [
-      "Receive document",
-      "Extract supplier and amounts",
-      "Match project, PO and cost code",
-      "Validate exceptions",
-      "Obtain financial approval",
-      "Update supported systems",
-      "Verify and audit"
-    ],
-    "control": "Financial writes and payments require configured authority; preserve the visitor's human-approval decisions.",
-    "successMeasures": "Processing time, exception rate, approval time and data accuracy",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 39,
-    "name": "Project or cost visibility",
-    "category": "Finance operations",
-    "systems": [
-      "automation",
-      "crm",
-      "privacy"
-    ],
-    "possibleWorkflow": [
-      "Receive document",
-      "Extract supplier and amounts",
-      "Match project, PO and cost code",
-      "Validate exceptions",
-      "Obtain financial approval",
-      "Update supported systems",
-      "Verify and audit"
-    ],
-    "control": "Financial writes and payments require configured authority; preserve the visitor's human-approval decisions.",
-    "successMeasures": "Processing time, exception rate, approval time and data accuracy",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 40,
-    "name": "Financial reporting preparation",
-    "category": "Finance operations",
-    "systems": [
-      "automation",
-      "crm",
-      "privacy"
-    ],
-    "possibleWorkflow": [
-      "Receive document",
-      "Extract supplier and amounts",
-      "Match project, PO and cost code",
-      "Validate exceptions",
-      "Obtain financial approval",
-      "Update supported systems",
-      "Verify and audit"
-    ],
-    "control": "Financial writes and payments require configured authority; preserve the visitor's human-approval decisions.",
-    "successMeasures": "Processing time, exception rate, approval time and data accuracy",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 41,
-    "name": "Information difficult to find",
-    "category": "Documents & knowledge",
+    "name": "Management lacks one view of AI actions",
+    "category": "Project control",
     "systems": [
       "identity",
-      "automation",
       "privacy"
     ],
     "possibleWorkflow": [
-      "Identify permitted sources",
-      "Retrieve and compare",
-      "Preserve source context",
-      "Flag uncertainty or staleness",
-      "Provide answer or reviewed document"
+      "Identify the project and source",
+      "Extract and validate the relevant information",
+      "Check rules and missing context",
+      "Prepare the next action",
+      "Require approval where configured",
+      "Verify and record the outcome"
     ],
-    "control": "Respect source access; distinguish document content from trusted instructions.",
-    "successMeasures": "Search time, answer accuracy and stale-information incidents",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 42,
-    "name": "Manual document extraction",
-    "category": "Documents & knowledge",
-    "systems": [
-      "identity",
-      "automation",
-      "privacy"
-    ],
-    "possibleWorkflow": [
-      "Identify permitted sources",
-      "Retrieve and compare",
-      "Preserve source context",
-      "Flag uncertainty or staleness",
-      "Provide answer or reviewed document"
-    ],
-    "control": "Respect source access; distinguish document content from trusted instructions.",
-    "successMeasures": "Search time, answer accuracy and stale-information incidents",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 43,
-    "name": "Document comparison or review",
-    "category": "Documents & knowledge",
-    "systems": [
-      "identity",
-      "automation",
-      "privacy"
-    ],
-    "possibleWorkflow": [
-      "Identify permitted sources",
-      "Retrieve and compare",
-      "Preserve source context",
-      "Flag uncertainty or staleness",
-      "Provide answer or reviewed document"
-    ],
-    "control": "Respect source access; distinguish document content from trusted instructions.",
-    "successMeasures": "Search time, answer accuracy and stale-information incidents",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 44,
-    "name": "Repetitive document generation",
-    "category": "Documents & knowledge",
-    "systems": [
-      "identity",
-      "automation",
-      "privacy"
-    ],
-    "possibleWorkflow": [
-      "Identify permitted sources",
-      "Retrieve and compare",
-      "Preserve source context",
-      "Flag uncertainty or staleness",
-      "Provide answer or reviewed document"
-    ],
-    "control": "Respect source access; distinguish document content from trusted instructions.",
-    "successMeasures": "Search time, answer accuracy and stale-information incidents",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 45,
-    "name": "Company knowledge fragmented across systems",
-    "category": "Documents & knowledge",
-    "systems": [
-      "identity",
-      "automation",
-      "privacy"
-    ],
-    "possibleWorkflow": [
-      "Identify permitted sources",
-      "Retrieve and compare",
-      "Preserve source context",
-      "Flag uncertainty or staleness",
-      "Provide answer or reviewed document"
-    ],
-    "control": "Respect source access; distinguish document content from trusted instructions.",
-    "successMeasures": "Search time, answer accuracy and stale-information incidents",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 46,
-    "name": "Manual booking or rescheduling",
-    "category": "Scheduling & communication",
-    "systems": [
-      "automation",
-      "communication",
-      "crm"
-    ],
-    "possibleWorkflow": [
-      "Understand request",
-      "Check approved context and availability",
-      "Propose action",
-      "Apply permission and approval",
-      "Perform supported operation",
-      "Verify result"
-    ],
-    "control": "Check time zones, availability, consent and delivery status before claiming a result.",
-    "successMeasures": "Scheduling time, missed commitments and completed follow-ups",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 47,
-    "name": "Calendar or staff coordination",
-    "category": "Scheduling & communication",
-    "systems": [
-      "automation",
-      "communication",
-      "crm"
-    ],
-    "possibleWorkflow": [
-      "Understand request",
-      "Check approved context and availability",
-      "Propose action",
-      "Apply permission and approval",
-      "Perform supported operation",
-      "Verify result"
-    ],
-    "control": "Check time zones, availability, consent and delivery status before claiming a result.",
-    "successMeasures": "Scheduling time, missed commitments and completed follow-ups",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 48,
-    "name": "Email overload",
-    "category": "Scheduling & communication",
-    "systems": [
-      "automation",
-      "communication",
-      "crm"
-    ],
-    "possibleWorkflow": [
-      "Understand request",
-      "Check approved context and availability",
-      "Propose action",
-      "Apply permission and approval",
-      "Perform supported operation",
-      "Verify result"
-    ],
-    "control": "Check time zones, availability, consent and delivery status before claiming a result.",
-    "successMeasures": "Scheduling time, missed commitments and completed follow-ups",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 49,
-    "name": "Routine outbound communication",
-    "category": "Scheduling & communication",
-    "systems": [
-      "automation",
-      "communication",
-      "crm"
-    ],
-    "possibleWorkflow": [
-      "Understand request",
-      "Check approved context and availability",
-      "Propose action",
-      "Apply permission and approval",
-      "Perform supported operation",
-      "Verify result"
-    ],
-    "control": "Check time zones, availability, consent and delivery status before claiming a result.",
-    "successMeasures": "Scheduling time, missed commitments and completed follow-ups",
-    "verificationRequired": [
-      "Input source and data access",
-      "Specific software operations",
-      "Permission and approval scope"
-    ]
-  },
-  {
-    "id": 50,
-    "name": "Important commitments or follow-ups being forgotten",
-    "category": "Scheduling & communication",
-    "systems": [
-      "automation",
-      "communication",
-      "crm"
-    ],
-    "possibleWorkflow": [
-      "Understand request",
-      "Check approved context and availability",
-      "Propose action",
-      "Apply permission and approval",
-      "Perform supported operation",
-      "Verify result"
-    ],
-    "control": "Check time zones, availability, consent and delivery status before claiming a result.",
-    "successMeasures": "Scheduling time, missed commitments and completed follow-ups",
+    "control": "Use verified project context, permissions and human review for uncertain or sensitive actions.",
+    "successMeasures": "Manual time, cycle time, exception rate and rework",
     "verificationRequired": [
       "Input source and data access",
       "Specific software operations",
