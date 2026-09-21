@@ -60,7 +60,7 @@
   reduced.addEventListener('change', () => {
     if (reduced.matches) { cancelAnimationFrame(entranceFrame); entrance?.cancel(); }
   });
-  window.TwinBrand = { accent: '#167CB4', revision: 'twin-brand-restored-1' };
+  window.TwinBrand = { accent: '#167CB4', revision: 'construct-white-label-1' };
   applyBrand();
   revealOrb();
 })();
