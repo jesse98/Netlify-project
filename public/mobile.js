@@ -10,9 +10,9 @@
   miniWrap.setAttribute('aria-hidden', 'true'); miniWrap.append(mini);
   const markerOrder = ['identity', 'communication', 'automation', 'sales', 'crm', 'privacy'];
   const captions = {
-    identity: ['Identity & Memory'], communication: ['Voice Cloning', '& Communication'],
-    automation: ['Business', 'Automation'], sales: ['Sales & Customer', 'Automation'],
-    crm: ['CRM &', 'Integrations'], privacy: ['Private', 'Intelligence']
+    identity: ['Project', 'Intelligence'], communication: ['Communication', 'Intelligence'],
+    automation: ['Workflow', 'Automation'], sales: ['Commercial & Cost', 'Intelligence'],
+    crm: ['Construction', 'Integrations'], privacy: ['Approvals', '& Control']
   };
   const motionControl = button('Pause animation', () => { $('motion').click(); syncMotion(); }, 'mobile-motion-button');
   motionControl.id = 'mobile-motion';
@@ -56,7 +56,7 @@
     if (!motionControl.isConnected) $('browse-dialog').insertBefore(motionControl, $('browse-close').parentElement);
     syncMotion();
     if (!state.category) {
-      $('title').innerHTML = 'Twin <span>Intelligence</span>';
+      $('title').innerHTML = 'Construction <span>Intelligence</span>';
       $('subtitle').textContent = 'AI systems for construction businesses that connect existing software, automate repetitive work and turn project information into action.';
       if (state.view === 'core') for (const b of $('nodes').children) {
         const mark = node('span', undefined, 'mobile-marker'); mark.setAttribute('aria-hidden', 'true');
